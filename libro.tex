@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+\setcounter{secnumdepth}{3} % para que ponga 1.1.1.1..
+\setcounter{tocdepth}{4} % para que añadir las secciones en el índice...
+\begin{document}
+%\title{LIBRO DIGITAL DE MATEMÁTICAS SUPERIOR}
+
+%\tableofcontents
+\begin{titlepage}
+ \begin{center}
+  \vspace*{-1in}
+  \begin{figure}[htb]
+   \begin{center}
+    \includegraphics[width=8cm]{espe.jpg}
+   \end{center}
+ \end{figure}
+
+  INGENIERIA MECATRÓNICA\\
+  \vspace*{0.15in}
+  DEPARTAMENTO DE CIENCIAS EXACTAS\\
+  \vspace*{0.6in}
+  \begin{Large}
+   \textbf{LIBRO DE MATEMATICAS SUPERIOR} \\
+   \author{Erik Quijije}
+  \end{Large}
+  \vspace*{0.3in}
+  \begin{large}
+   Supervisado por: \\
+   Ing. Marcelo Roman \\
+   2014\\
+  \end{large}
+ \end{center}
+\end{titlepage}
+
+\chapter*{CAPÍTULO I}
+\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\begin{flushright}
+\textit{Dedicado a \\
+mi familia \\
+mis amigos \\
+la universidad}
+\end{flushright}
+
+\chapter*{Agradecimientos}
+Agradecimientos % si no queremos que añada la palabra "Capitulo"
+\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
+
+¡Muchas gracias a todos!
+
+\tableofcontents % indice de contenidos
+\addcontentsline{toc}{chapter}{Lista de figuras}
+\cleardoublepage
+\pagenumbering{arabic}
+\part{Primera Unidad}
+ \input{CapítuloI/capitulo1}
+%\input{../parte1/capitulo2}
+%\input{../parte1/capitulo3}
+%\input{../parte1/capitulo4}
+
+%\part{Segunda unidad}
+%\input{../parte2/capitulo1}
+%\input{../parte2/capitulo2}
+%\input{../parte2/capitulo3}
+
+%\part{Tercera unidad}
+%\input{../parte3/capitulo1} 
+%\input{../parte3/capitulo2}
+%\input{../parte3/capitulo3}
+
+\end{document}
