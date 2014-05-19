@@ -6,13 +6,43 @@
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{graphicx}
+\usepackage{listings}
+\lstset{language=bash,breaklines=true}
 \author{José Jácome,Erik Quijije}
 \title{Tutorial Máxima}
 \usepackage{listings}
 \usepackage{color}
 \usepackage{inputenc}
-\lstset{language=Lisp}
+%\lstset{language=Lisp}
 \begin{document}
+\begin{titlepage}
+ \begin{center}
+  \vspace*{-1in}
+  \begin{figure}[htb]
+   \begin{center}
+    \includegraphics[width=8cm]{espe.jpg}
+   \end{center}
+ \end{figure}
+
+  INGENIERIA MECATRÓNICA\\
+  \vspace*{0.15in}
+  DEPARTAMENTO DE CIENCIAS EXACTAS\\
+  \vspace*{0.6in}
+  \begin{Large}
+   \textbf{LIBRO DE MATEMATICAS SUPERIOR} \\
+   \author{Maqueavelo Hidrovo}
+   \author{José Jácome}
+   \author{Erik Quijije}
+  \end{Large}
+  \vspace*{0.3in}
+  \begin{large}
+   Supervisado por: \\
+   Dr. Marcelo Roman \\
+   2014\\
+  \end{large}
+ \end{center}
+\end{titlepage}
+
 \chapter{Primeros pasos con WXMaxima}
 \section{Que es Máxima?}
 \begin{small}
@@ -20,6 +50,7 @@ El sistema de álgebra computacional Maxima es un motor de cálculo simbólico e
 Cuenta con un amplio conjunto de funciones para hacer manipulación simbólica de polinomios, matrices, funciones racionales, integración, derivación, manejo de gráficos en 2D y 3D, manejo de números de coma flotante muy grandes, expansión en series de potencias y de Fourier, entre otras funcionalidades.\\
 Maxima funciona en modo consola, sin embargo incluye las intefaces gráficas xMaxima y wxMaxima para facilitar su uso.\\
 \section{Instalacion de WXMaxima en GNU-Linux}
+\subsection{Debian, Ubuntu y Derivadas}
 Para instalar máxima en una distribución Debian Ubuntu y derivados es tan dificil como hacer:\\
 \begin{enumerate}
 
@@ -27,7 +58,10 @@ Para instalar máxima en una distribución Debian Ubuntu y derivados es tan difi
 \item Instalamos maxima:\\
 \begin{center}
 \includegraphics[width=13cm]{fotos/cap2}
-\caption{\textbf{sudo apt-get install maxima}}
+\begin{lstlisting}
+	sudo apt-get install maxima
+\end{lstlisting}
+%\caption{\textbf{}}
 \end{center}
 \end{figure}
 
@@ -51,17 +85,25 @@ Para instalar máxima en una distribución Debian Ubuntu y derivados es tan difi
 
 
 \begin{figure}[htb]
-Si todo ha ido bien, debería ser posible ejecutar el editor wxmaxima:\\
+Si todo ha ido bien, debería ser posible ejecutar el editor WxMaxima:\\
 \begin{center}
 \includegraphics[width=13cm]{fotos/cap7}
 \caption{\textbf{Corriendo la interfaz}}
 \end{center}
 \end{figure}
 \end{enumerate}
-
-
 \begin{figure}[htb]
-\vspace*{-2,5in}
+\subsection{Arch Linux y Derivadas (Manjaro, Antergos, Chakra)}
+Para poder instalar WxMaxima eng Arch Linux utilizamos el siguiente comando en un terminal:
+\begin{center}
+	\begin{lstlisting}
+	sudo pacman -S wxmaxima maxima
+\end{lstlisting}
+\end{center}\includegraphics[scale=0.30]{fotos/Maxima.png} \\
+Después de estos buscamos en nuestro menú de aplicaciones\\ 
+\includegraphics[scale=0.30]{fotos/Maxima1.png} \\
+Si logramos encontrarlo, ejecutamos el programa tal como nos muestra la Captura\\ 
+\includegraphics[scale=0.35]{fotos/Maxima2.png} \\
 \section{Interfaz de MXMaxima}
 
 Maxima es un programa que se ha diseñado para funcionar en una terminal de texto y aqui veremos el uso de Maxima con la interface de texto donde ejecutamos la terminal y escribimos maxima.\\
