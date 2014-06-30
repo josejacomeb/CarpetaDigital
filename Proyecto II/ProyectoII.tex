@@ -14,6 +14,7 @@
 \title{Proyecto II}
 %Comando para hacer un rectangulo en una palabra
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \begin{document}
 \begin{titlepage}
 \begin{center}
@@ -135,6 +136,30 @@ Lo que es más, el Raspberry Pi tiene la capacidad de interactuar con el mundo e
 	\includegraphics[scale=0.35]{raspberry.jpg}
 \end{center}
 
+\subsection{Puertos GPIO}
+
+GPIO (General Purpose Input/Output, Entrada/Salida de Propósito General) es un pin genérico en un chip, cuyo comportamiento (incluyendo si es un pin de entrada o salida) se puede controlar (programar) por el usuario en tiempo de ejecución.\\
+
+Los pines GPIO no tienen ningún propósito especial definido, y no se utilizan de forma predeterminada. La idea es que a veces, el para el diseño de un sistema completo que utiliza el chip podría ser útil contar con un puñado de líneas digitales de control adicionales, y tenerlas a disposición ahorra el tiempo de tener que organizar circuitos adicionales para proporcionarlos. Por ejemplo, los chips Realtek ALC260 (códec de audio) tienen 8 pines GPIO, que quedan sin utilizar de forma predeterminada. Algunos integradores de sistemas (Acer Inc. laptops) que emplea el ALC260 utilizan la primera GPIO (GPIO0) para encender el amplificador utilizado para los altavoces internos y el conector de auriculares del ordenador portátil.\\
+
+\subsection{Codigo para generar una onda de sonido}
+
+El siguiente código puede ser ejecutado sobre un Raspberry Pi gracias al Lenguaje de Programación Python y la librería Wiringpi2
+\begin{verbatim}
+import sys
+import time
+import wiringpi2
+
+io = wiringpi2.GPIO(wiringpi2.GPIO.WPI_MODE_PINS)
+
+wiringpi2.softToneCreate(7)
+
+wiringpi2.softToneWrite(7,int(sys.argv[1]))
+time.sleep(float(sys.argv[2]))
+\end{verbatim}
+
+
+
 \section{Conclusiones}
 
 \begin{itemize}
@@ -154,18 +179,12 @@ Lo que es más, el Raspberry Pi tiene la capacidad de interactuar con el mundo e
 
 \end{enumerate}
 
-
 \section{Bibliografía}
 
-\begin{thebibliography}{99}
-\bibitem {\it Graficador de serie de Fourier} , {http://mygnet.net/codigos/matlab/graficacion/graficador_de_series_de_fourier.3276} . Consultado en Junio del 2014.
-\end{thebibliography}
-
-%\begin{thebibliography}{}
-%\bibitem “Graficador de serie de Fourier”, http://mygnet.net/codigos/matlab/graficacion/graficador_de_series_de_fourier.3276,  Consultado en Junio del 2014.
-%\bibitem “Señales y análisis de Fourier”, http://www.slideshare.net/psyrcd/sa-fourier-con-matlab , Consultado en diciembre del 2013.
-%\bibitem “Series de Fourier”, Aplicación de las matemáticas, http://personal.us.es/niejimjim/tema07.pdf , Consultado en Junio del 2014
-%\end{thebibliography}
-
+\begin{enumerate}
+\item “Graficador de serie de Fourier”, http://mygnet.net/codigos/matlab/graficacion, Consultado en Junio del 2014.
+\item “Señales y análisis de Fourier”, http://www.slideshare.net/psyrcd/sa-fourier-con-matlab , Consultado en diciembre del 2013.
+\item “Series de Fourier”, Aplicación de las matemáticas, http://personal.us.es/niejimjim/tema07.pdf , Consultado en Junio del 2014
+\end{enumerate}
 
 \end{document}
