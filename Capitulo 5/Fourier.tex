@@ -1,0 +1,29 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{José Jácome}
+\title{Transformada de Fourier}
+\begin{document}
+\section{La transformada de Fourier del Escalón Unitario}
+\subsection{Función Escalón Unitario}
+También conocida como función de Heaviside, es una función discontinua cuyo valor es 0 para cualquier argumento negativo y 1 para cualquier argumento positivo.\\
+
+\begin{center}
+$\displaystyle {\forall x \in \mathbb{R} : \quad u(t)=H(t)=\left \{\begin{matrix}0 & \mathrm{si} & t < 0 \\ 1 & \mathrm{si} & t \ge 0 \end{matrix} \right . } $ 
+\end{center}
+
+Tiene aplicaciones en ingeniería de control y procesamiento de señales, representando una señal que se enciende en un tiempo específico, y se queda encendida indefinidamente. 
+
+\subsection{Desarrollo de la Función Escalón con Fourier} 
+Supóngase $\mathcal{F}[u(t)] = F(\omega)$, entonces se tiene $\mathcal{F}[u(-t)] = F(- \omega)$, puesto que: 
+\begin{center}
+$\displaystyle { u(-t)=\left \{\begin{matrix}0 & \mathrm{si} & t > 0 \\ 1 & \mathrm{si} & t < 0 \end{matrix} \right . } $ 
+\end{center}
+Se tiene $u(t) + u(-t) = 1$ (Exceptuando cuando $t=0$), por la Linealidad de la Transformada de Fourier, se tiene $\mathcal{F} [u(t)] + \mathcal{F} [u(-t)] = \mathcal{F} [1]$, esto es $F(\omega) + F(-\omega) = 2 \pi \delta (\omega)$, se supone que $F(\omega)=k \delta{\omega} + B (\omega)$, donde $k$ es una constante, y $B(\omega)$ es una función ordinaria, se halla estos términos resultando en:\\
+\begin{center}
+$\mathcal{F}[u(t)] = \pi \delta (\omega) + \dfrac{1}{j \omega}$
+\end{center}
+
+\end{document}
