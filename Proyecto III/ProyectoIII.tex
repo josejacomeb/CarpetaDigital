@@ -44,8 +44,8 @@
 
 \tableofcontents % indice de contenidos
 \addcontentsline{toc}{chapter}{Indíce del Proyecto}
-\clearpage
 \phantomsection
+\clearpage
 
 
 \section{Tema}
@@ -111,39 +111,32 @@ plot(f,A(1:101));
 
 \end{verbatim}
 
+\subsection{Ejemplo Práctico}
 
+Mediante el programa \textit{Audacity} se puede analizar ondas de audio, así mediante la importación de un archivo de audio en este caso con una Amplitud de 100Hz durante un intervalo de tiempo de 0.010 s entre cada onda, el programa nos da una gráfica idealizada asi:
+\begin{center}
+	\includegraphics[scale=0.5]{Cuadrada.png} 
+\end{center}
 
-\subsection{Puertos GPIO}
+Esta gráfica nos muestra una aproximación en Serie de Fourier de la Onda, así el análisis por Transformada de Fourier se empieza con el espectro, que se obtiene al aplicar esta operación:
 
-GPIO (General Purpose Input/Output, Entrada/Salida de Propósito General) es un pin genérico en un chip, cuyo comportamiento (incluyendo si es un pin de entrada o salida) se puede controlar (programar) por el usuario en tiempo de ejecución.\\
+\begin{center}
+	\includegraphics[scale=0.5]{Espectro.png} 
+\end{center}
 
-Los pines GPIO no tienen ningún propósito especial definido, y no se utilizan de forma predeterminada. La idea es que a veces, el para el diseño de un sistema completo que utiliza el chip podría ser útil contar con un puñado de líneas digitales de control adicionales, y tenerlas a disposición ahorra el tiempo de tener que organizar circuitos adicionales para proporcionarlos. Por ejemplo, los chips Realtek ALC260 (códec de audio) tienen 8 pines GPIO, que quedan sin utilizar de forma predeterminada. Algunos integradores de sistemas (Acer Inc. laptops) que emplea el ALC260 utilizan la primera GPIO (GPIO0) para encender el amplificador utilizado para los altavoces internos y el conector de auriculares del ordenador portátil.\\
+Dicha operación permite manipular la onda de sonido, así reduciendole los bajos o los altos y aplicandole una transformada inversa nos permite obtener una onda de audio " rectificada "\\
 
-\subsection{Codigo para generar una onda de sonido}
-
-El siguiente código puede ser ejecutado sobre un Raspberry Pi gracias al Lenguaje de Programación Python y la librería Wiringpi2
-\begin{verbatim}
-import sys
-import time
-import wiringpi2
-
-io = wiringpi2.GPIO(wiringpi2.GPIO.WPI_MODE_PINS)
-
-wiringpi2.softToneCreate(7)
-
-wiringpi2.softToneWrite(7,int(sys.argv[1]))
-time.sleep(float(sys.argv[2]))
-\end{verbatim}
-
+Así vemos que mediante un circuito pasabajas 
 
 
 \section{Conclusiones}
 
 \begin{itemize}
 
-\item El análisis espectral de señales continuas y no periódicas se puede llevar a cabo usando Fourier, con aproximación de una o de varias ondas que forman la onda la onda de sonido.
-\item El sonido es una onda periódica en el tiempo que se puede ajustar fácilmente a una serie de Fourier, tomando en cuenta se amplitud modulo, entre otras, ya que estas le  dan las características y comportamiento de las ondas espectrales. 
-\item El circuito amplificador permitió reproducir y apreciar la forma sonora de las ondas espectrales de sonido por medios auditivos, pudiendo constatar la onda producida.
+\item El análisis espectral de señales continuas y no periódicas se puede llevar a cabo usando los métodos de Fourier, con aproximación de una o de varias ondas que forman la onda la onda de sonido.
+\item El sonido es una onda periódica en el tiempo que se puede ajustar fácilmente a una serie de Fourier, la transformada de Fourier se usa para poder mejorar el sonido. 
+\item Muchos programas básicos de audio como Audacity incorporan los Métodos de Fourier para el análisis de Audio.
+
 
 \end{itemize}
 
@@ -159,9 +152,6 @@ time.sleep(float(sys.argv[2]))
 \section{Bibliografía}
 
 \begin{enumerate}
-\item “Graficador de serie de Fourier”, http://mygnet.net/codigos/matlab/graficacion, Consultado en Junio del 2014.
-\item “Señales y análisis de Fourier”, http://www.slideshare.net/psyrcd/sa-fourier-con-matlab , Consultado en diciembre del 2013.
-\item “Series de Fourier”, Aplicación de las matemáticas, http://personal.us.es/niejimjim/tema07.pdf , Consultado en Junio del 2014
 \item http://tumblr.charlio.com/post/47242490697/la-transformada-de-fourier-for-dummies
 \item http://ensujustamedida.blogspot.com/2011/01/descomponiendo-el-sonido-la.html
 \item https://es.wikipedia.org/wiki/
