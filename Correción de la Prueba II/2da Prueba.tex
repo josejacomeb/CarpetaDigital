@@ -1,0 +1,153 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Guido Torres}
+\title{Correccion de la segunda prueba}
+\begin{document}
+
+\begin{center}
+
+\textbf{Corrección de la Segunda Prueba}
+
+\end{center}
+\begin{enumerate}
+
+\item Resolver las siguientes EDP(Ecuaciones Diferenciales Parciales)
+
+\begin{enumerate}
+\item $u_x=u_y+u$
+\item $a^2 \frac{d^2u}{{dx}^2}=\frac{d^2u}{{dt}^2}$ 
+\end{enumerate}
+
+Desarrollo
+\begin{enumerate}
+\item $u_x=u_y+u$
+\end{enumerate}
+\begin{center}
+${ X }^{ ' }Y={ Y }^{ ' }X+XY$
+\\
+$\frac { { X }^{ ' } }{ X } =\frac { { Y }^{ ' }+Y }{ Y } =-\lambda $
+
+\end{center}
+
+\begin{center}
+$\lambda=0$
+\end{center}
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }=0$ & ${ Y }^{ ' }+Y=0$   \\ 
+$D=0$ & $D+1=0$  \\ 
+  & $D=-1$  \\ 
+$X_{(x)}=C_1$ & $Y_{(y)}=C_2 e^{-y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1(C_2 e^{-y})$
+\\
+$u=X_{(x)} Y_{(y)}=C_1C_2 e^{-y}$
+
+
+\begin{center}
+$\lambda=\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }+{ \alpha  }^{ 2 }X=0$ & ${ Y }^{ ' }+Y+{\alpha}^2 Y=0$   \\ 
+                                   & $D+1+{\alpha}^2=0$  \\ 
+$D+{ \alpha  }^{ 2 }=0$ & $D=-1-{\alpha}^2$  \\ 
+$X_{(x)}=C_1 e^{-{\alpha}^2 x}$ & $Y_{(y)}=C_2 e^{-y-{\alpha}^2 y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1 e^{-{\alpha}^2 x} C_2 e^{-y-{\alpha}^2 y}$
+
+
+\begin{center}
+$\lambda=-\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }-{ \alpha  }^{ 2 }X=0$ & ${ Y }^{ ' }+Y-{\alpha}^2 Y=0$   \\ 
+                                   & $D+1-{\alpha}^2=0$  \\ 
+$D-{ \alpha  }^{ 2 }=0$ & $D=-1+{\alpha}^2$  \\ 
+$X_{(x)}=C_1 e^{{\alpha}^2 x}$ & $Y_{(y)}=C_2 e^{-y+{\alpha}^2 y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1 e^{-{\alpha}^2 x} C_2 e^{-y-{\alpha}^2 y}$
+
+\item $a^2 \frac{d^2u}{{dx}^2}=\frac{d^2u}{{dt}^2}$ 
+
+\begin{center}
+${ a }^{ 2 } { X }^{ '' }t=X{ t }^{ '' }$\\$ { a }^{ 2 } \frac { { X }^{ '' } }{ X } = \frac { t^{ '' } }{ t } =- \lambda $
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ ${ a }^{ 2 }{ X }^{ '' }+\lambda X=0$ & $t^{ '' }+ \lambda t=0$   \\ 
+ \end{tabular}
+\end{center}
+
+
+
+
+
+\begin{center}
+$\lambda=0$
+\end{center}
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }=0$ & ${ t }^{ '' }=0$   \\ 
+$a^2D^2=0$ & $D^2=0$  \\ 
+$D=0$  & $D=0$  \\ 
+$X_{(x)}=C_1+C_2x$ & $Y_{(y)}=C_3+C_4y$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1+C_2x)(C_3+C_4y)$
+
+
+\begin{center}
+$\lambda=\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }+{\alpha}^2X=0$ & ${ t }^{ '' }+{\alpha}^2t=0$   \\ 
+$a^2D^2+{\alpha}^2=0$                      & $D^2+{\alpha}^2=0$  \\ 
+$D^2=-\frac{{\alpha}^{ 2 }}{a^2}$ & $D^2=-{\alpha}^2$  \\ 
+$D= \pm \frac{\alpha}{a}j$ & $D=\pm \alpha$  \\ 
+$X_{(x)}=C_1\cos(\frac{\alpha}{a} x)+C_2 \sin(\frac{\alpha}{a} x)$ & $Y_{(y)}=C_3\cos(\alpha y)+C_4\sin(\alpha y)$  \\
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1\cos(\frac{\alpha}{a} x)+C_2 \sin(\frac{\alpha}{a} x))(C_3\cos(\alpha y)+C_4\sin(\alpha y))$
+
+
+\begin{center}
+$\lambda=-\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }-{\alpha}^2X=0$ & ${ t }^{ '' }-{\alpha}^2t=0$   \\ 
+$a^2D^2-{\alpha}^2=0$                      & $D^2-{\alpha}^2=0$  \\ 
+$D^2=\frac{{\alpha}^{ 2 }}{a^2}$ & $D^2={\alpha}^2$  \\ 
+$D=\pm \frac{\alpha}{a}j$ & $D=\pm \alpha$  \\ 
+$X_{(x)}=C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x}$ & $Y_{(y)}=C_3e^{\alpha x}+C_4e^{-\alpha x}$  \\
+
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x})(C_3e^{\alpha x}+C_4e^{-\alpha x})$
+
+\end{enumerate}
+
+
+\end{document}
