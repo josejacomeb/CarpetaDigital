@@ -15,6 +15,14 @@ UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\\
 EXTENSIÓN LATACUNGA
 \end{center}
 MATEMÁTICA SUPERIOR\\
+\textbf{1) Resuelva la siguiente EDP} 
+
+$\frac { { d }^{ 2 }u\quad  }{ d{ x }^{ 2 } } =\frac { 4du }{ dy } \\
+u=xy\\ { u }_{ xx }={ x }^{ " }y\quad \qquad \qquad { u }_{ y }=x{ y }^{ ' }\\ entonces\quad \\ { x }^{ " }y=4x{ y }^{ ' }\\ \\ \frac { { x }^{ " } }{ x } =\frac { 4{ y }^{ ' } }{ y } =-\lambda \\ \\ cuando\quad \lambda =0.\\ \\ { x }^{ " }=0\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \quad \qquad 4{ y }^{ ' }=0\\ { D }^{ 2 }=0\qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad 4D=0\\ \\ x={ c }_{ 1 }{ e }^{ 0x }+{ c }_{ 2 }{ xe }^{ 0x }\qquad \qquad \qquad \qquad \qquad y={ c }_{ 3 }{ e }^{ 0x }={ c }_{ 3 }\\ x={ c }_{ 1 }+{ c }_{ 2 }x\\ \qquad \qquad u=xy=[{ c }_{ 1 }+{ c }_{ 2 }x]*{ c }_{ 1 }={ c }_{ 4 }+{ c }_{ 5 }x\\\\
+cuando\quad \lambda ={ \alpha  }^{ 2 }\\ { x }^{ '' }+{ \alpha  }^{ 2 }x=0\qquad \qquad \qquad \qquad \qquad 4y^{ ' }+{ \alpha  }^{ 2 }y=0\\ D^{ 2 }+{ \alpha  }^{ 2 }=0\qquad \qquad \qquad \qquad \qquad 4D+{ \alpha  }^{ 2 }=0\\ D^{ 2 }=\pm j\alpha \qquad \qquad \qquad \qquad \qquad \qquad D=-\frac { { \alpha  }^{ 2 } }{ 4 } \\ x={ e }^{ 0x }[{ c }_{ 1 }cos\alpha x+{ c }_{ 2 }sen\alpha x]\\ x={ c }_{ 1 }cos\alpha x+{ c }_{ 2 }sen\alpha x\\ y={ c }_{ 3 }{ e }^{ -\frac { { \alpha  }^{ 2 } }{ 4 } x }\\ u=xy=[{ c }_{ 1 }cos\alpha x+{ c }_{ 2 }sen\alpha x]*{ c }_{ 3 }{ e }^{ -\frac { { \alpha  }^{ 2 } }{ 4 } x }\\\\
+cuando\quad \lambda =-{ \alpha  }^{ 2 }\\ { x }^{ '' }-{ \alpha  }^{ 2 }x=0\qquad \qquad \qquad \qquad \qquad 4y^{ ' }-{ \alpha  }^{ 2 }y=0\\ D^{ 2 }-{ \alpha  }^{ 2 }=0\qquad \qquad \qquad \qquad \qquad 4D-{ \alpha  }^{ 2 }=0\\ D=\pm \alpha \qquad \qquad \qquad \qquad \qquad \qquad D=\frac { { \alpha  }^{ 2 } }{ 4 } \\ x={ c }_{ 1 }{ e }^{ \alpha x }+{ { c }_{ 2 }e }^{ -\alpha x }\\ x={ c }_{ 1 }cos\alpha x+{ c }_{ 2 }sen\alpha x\\ y={ c }_{ 3 }{ e }^{ \frac { { \alpha  }^{ 2 } }{ 4 } x }\\ u=xy=[{ c }_{ 1 }cos\alpha x+{ c }_{ 2 }sen\alpha x]*{ c }_{ 3 }{ e }^{ \frac { { \alpha  }^{ 2 } }{ 4 } x }
+$\\\\\
+
 \textbf{2) Halle la Serie de Fourier, la Transformada de Fourier, la transformada Inversa de Fourier y el Espectro de Frecuencias de la Función dada:} 
 
 \[
@@ -101,7 +109,34 @@ $\displaystyle{F(j \omega) =  \dfrac{1-e^{-j \omega}}{(j \omega)^2}  - \dfrac{ e
 Espectro de Frecuencias
 
 \end{center}
+\textbf{3) Defina:}
+-Defina una funcion ortonormal\\
+la expresion $\left( u,u \right) ={ \parallel u\parallel  }^{ 2 }$ se llama norma cuadrada.Por tanto podemos definir la norma cuadrada de una funcion como:\\
+$
+{ \parallel { \phi  }_{ n }(x)\parallel  }^{ 2 }=\int _{ a }^{ b }{ { \phi  }_{ n }^{ 2 }dx,\quad \quad  } \parallel { \phi  }_{ n }(x)\parallel =\sqrt { \int _{ a }^{ b }{ { \phi  }_{ n }^{ 2 }dx,\quad \quad  }  } \\ 
+$
+Si$\left\{ { \phi  }_{ n }(x) \right\}$ es un conjunto ortogonal en [a,b] con la propiedad de que $\parallel { \phi  }_{ n }(x)\parallel =1$,para todo n,entonces se llama conjunto ortonormal en [a,b]\\\\\\
+-Dedusca los coeficientes de la S.F en terminos de seno de 1/2 recorrido.\\\\
+Se tiene la forma general de la serie de Fourier:\\\\
+$f(x)=\frac { { a }_{ 0 } }{ 2 } +\sum _{ n=1 }^{ \infty  }{ ({ a }_{ n }cos\frac { n\pi  }{ p } x+{ a }_{ n }sen\frac { n\pi  }{ p } x) } \\ $\\\\
+Si multiplicamos la ecuacion 1 por .. e integramos y usamos los resultados .\\
+\begin{center}
+$\displaystyle{ \int _{ -p }^{ p }{ f(x){ a }_{ n }sen\frac { m\pi  }{ p } xdx } =\frac { { a }_{ 0 } }{ 2 } \int _{ -p }^{ p }{ sen\frac { m\pi  }{ p } x } dx+\sum _{ n=1 }^{ \infty  }{ ({ a }_{ n }\int _{ -p }^{ p }{ { a }_{ n }cos\frac { n\pi  }{ p } x*sen\frac { m\pi  }{ p } x } dx}}$\\
+$\displaystyle{+{ b }_{ n }\int _{ -p }^{ p }{ sen\frac { m\pi  }{ p } x*sen\frac { m\pi  }{ p } x } dx) } $
+\end{center}
+Mediante ortogonalidad tenemos:\\\\
+$\int _{ -p }^{ p }{ sen\frac { m\pi  }{ p }  } xdx=0\quad \quad \quad ,m>0,\int _{ -p }^{ p }{ sen\frac { m\pi  }{ p }  } x*sen\frac { n\pi  }{ p } xdx=0\\\\
+\int _{ -p }^{ p }{ sen\frac { m\pi  }{ p }  } x*sen\frac { n\pi  }{ p } xdx= \left\{ {0 ;  m \neq n \atop p ; m=n} \right.\\\\
+encontramos\quad que\quad :\\ b_n=\int _{ -p }^{ p }{ f(x)*sen\frac { n\pi  }{ p }  } xdx$\\
 \textbf{4) Defina y explique que es una Serie de Bessel}
-Es un caso particular de la series Generalizadas de Fourier\\
-\\${x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + (x^2 - \alpha^2)y = 0}$
+Es un caso particular de la series Generalizadas de Fourier, basado en la Función de Bessel que es la función: \\
+${x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + (x^2 - \alpha^2)y = 0}$\\
+Estas series son usadas en la solución de las ecuaciones diferenciales parciales particularmente en los sistemas de coordendas cilíndricas.\\
+
+La serie de Fourier-Bessel de una función $f$ definida en el intervalo (0,b) está dada por: \\
+\begin{center}
+ $\displaystyle{f(x) = \sum_{i = 1}^{\infty} c_i J_n (\alpha_i x)}$ \\
+ $\displaystyle{c_i = \dfrac{2}{b^2 J^2_{n+1} (\alpha_i b)} \int_{0}^{b} x J_n (\alpha _i x) f(x)}$\\
+ donde los $\alpha_i$ están definidos por $J_n (\alpha b) = 0$\\
+ \end{center} 
 \end{document}
