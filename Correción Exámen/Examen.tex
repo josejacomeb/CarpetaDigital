@@ -1,0 +1,107 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\author{José Jácome}
+\title{Corrección del Exámen III}
+\begin{document}
+\begin{center}
+UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\\
+EXTENSIÓN LATACUNGA
+\end{center}
+MATEMÁTICA SUPERIOR\\
+\textbf{2) Halle la Serie de Fourier, la Transformada de Fourier, la transformada Inversa de Fourier y el Espectro de Frecuencias de la Función dada:} 
+
+\[
+f(t)= \left\{ \begin{array}{lcl}
+0 & \mbox{ si } & -2 < t < 0 \\
+& & \\
+t & \mbox{ si } & 0 < t < 1\\
+& & \\
+1 & \mbox{ si } & 1 < t < 2\\
+\end{array}
+\right.
+\]
+
+%Codigo de la Imagen en Tikz de Geogebra
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqffqq}{rgb}{0.0,1.0,0.0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=2.0cm,y=2.0cm]
+\draw[->,color=black] (-2.7662337551415663,0.0) -- (4.045820382626854,0.0);
+\foreach \x in {-2.5,-2.0,-1.5,-1.0,-0.5,0.5,1.0,1.5,2.0,2.5,3.0,3.5,4.0}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.0,-0.1) -- (0.0,1.950875204839679);
+\foreach \y in {,0.5,1.0,1.5}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-2.7662337551415663,-0.1) rectangle (4.045820382626854,1.950875204839679);
+\draw [line width=2.0pt,color=qqffqq] (-2.0,0.0)-- (0.0,-0.0);
+\draw [line width=2.0pt,color=qqffqq] (0.0,-0.0)-- (1.0,1.0);
+\draw [line width=2.0pt,color=qqffqq] (1.0,1.0)-- (2.0,1.0);
+\draw (-1.2667756845795235,0.33049309632908164) node[anchor=north west] {f(t) = 0};
+\draw (0.14400475815358113,0.7577580304139655) node[anchor=north west] {f(t) = t};
+\draw (1.4983539831773616,1.297885399917498) node[anchor=north west] {f(t) = 1};
+\draw [dash pattern=on 1pt off 1pt,color=uuuuuu] (1.0,1.0)-- (1.0,0.0);
+\draw [dash pattern=on 1pt off 1pt,color=uuuuuu] (2.0,1.0)-- (2.0,0.0);
+\begin{scriptsize}
+\draw[color=qqffqq] (-0.9765579935029991,-0.05646382510628491) node {$a$};
+\draw[color=qqffqq] (0.6115777048879816,0.47560194186734406) node {$b$};
+\draw[color=qqffqq] (1.522538790767072,0.9431748886017453) node {$c$};
+\draw[color=uuuuuu] (0.8937337934346026,0.5723411722261857) node {$d$};
+\draw[color=uuuuuu] (1.893372507142631,0.5723411722261857) node {$e$};
+\end{scriptsize}
+\end{tikzpicture}
+
+\begin{center}
+Resolución\\
+Serie de Fourier\\
+Término $a_0$\\
+$T=4$ y $\delta = -2$
+\end{center}
+
+\begin{center}
+$\displaystyle{a_0 = \dfrac{2}{T} \int_{\delta}^{\delta + T} f(t) dt = \dfrac{2}{4} \int_{-2}^{2} f(t) dt = \dfrac{1}{2} (0 + \int_{0}^{1} t dt + \int_{1}^{2} 1 dt)}$\\
+$\displaystyle{a_0 = \dfrac{1}{2} (0 + \dfrac{t^2}{2} \mid^1_0  +t \mid^2_1 ) = \dfrac{1}{2} ( \dfrac{1^2 - 0}{2} +2-1)  = \dfrac{3}{4}}$\\
+Término $a_n$\\
+$\displaystyle{a_n = \dfrac{2}{T} \int_{\delta}^{\delta + T} f(t) cos (n \omega t)dt = \dfrac{2}{4} \int_{-2}^{2} f(t) cos (n \omega t)dt = \dfrac{1}{2} (0 + \int_{0}^{1} t cos (n \omega t) dt + \int_{1}^{2} cos (n \omega t) dt)}$\\
+$\displaystyle{a_n = \dfrac{1}{2} [\dfrac{sen(n \omega t) t}{n \omega} - \int_{0}^{1} \dfrac{sen(n \omega t)}{n \omega} dt + \mid_{0}^{1} \dfrac{sen(n \omega) t}{n \omega} \mid_{1}^{2}]}$\\
+$\displaystyle{a_n = \dfrac{1}{2} [(\dfrac{sen(n \omega t) }{n \omega} - \dfrac{cos(n \omega t)}{(n \omega)^2}   )\mid_{0}^{1} +  \dfrac{sen(n \omega t) t}{n \omega} \mid_{1}^{2}]}$\\
+$\displaystyle{a_n = \dfrac{1}{2} [\dfrac{2 sen(n \omega) - 0 }{n \omega} - \dfrac{cos(n \omega) - cos(0)}{(n \omega)^2} + \dfrac{sen(2 n \omega ) -sen(n \omega) }{n \omega} ]}$\\
+$\displaystyle{a_n = \dfrac{1}{2} [\dfrac{sen(2 n \omega)}{n \omega} - \dfrac{cos(n \omega) - 1}{(n \omega)^2}]}$\\
+$\omega = \dfrac{2 \pi}{T} = \dfrac{2 \pi}{4} = \dfrac{\pi}{2} $\\
+$\displaystyle{a_n = \dfrac{1}{2} [\dfrac{sen( n \pi)}{n \omega} - \dfrac{cos(n \dfrac{\pi}{2}) - 1}{(n \omega)^2}]}$\\
+$sen (n \pi) = 0$\\
+$\displaystyle{a_n = \dfrac{1}{2} [  \dfrac{1 - cos(n \omega)}{(n \omega)^2}]}$\\
+Término $b_0$\\
+
+$\displaystyle{b_n = \dfrac{2}{T} \int_{\delta}^{\delta + T} f(t) sen (n \omega t)dt = \dfrac{2}{4} \int_{-2}^{2} f(t) sen (n \omega t)dt = \dfrac{1}{2} ( + \int_{0}^{1} t sen (n \omega t) dt + \int_{1}^{2} sen (n \omega t) dt)}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [(\dfrac{- cos(n \omega t) t}{n \omega} + \int_{0}^{1} \dfrac{cos(n \omega t)}{n \omega} dt)  \mid_{0}^{1}  - \dfrac{cos(n \omega t) }{n \omega} \mid_{1}^{2}]}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [(\dfrac{- cos(n \omega t) t}{n \omega} + \dfrac{sen(n \omega t)}{(n \omega)^2})  \mid_{0}^{1}  - \dfrac{cos(n \omega t) }{n \omega} \mid_{1}^{2}]}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [(-\dfrac{cos(n \omega ) - 0cos(0)}{n \omega} + \dfrac{sen(n \omega)- sen(0)}{(n \omega)^2}) - \dfrac{cos(2 n \omega)- cos(n \omega) }{n \omega}]}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [\dfrac{sen(n \omega)}{(n \omega)^2}  - \dfrac{cos(2 n \omega)}{n \omega}]}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [\dfrac{sen(n \omega)}{(n \omega)^2}  - \dfrac{(-1)^n}{n \omega}]}$\\
+Serie de Fourier \\
+$\displaystyle{f(t) = \dfrac{1}{2} a_0 + \sum_{n = 1}^{\infty} (a_n cos(nt) + b_n sen(nt))}$\\
+$\displaystyle{f(t) = \dfrac{3}{8} a_0 + \dfrac{1}{2} \sum_{n = 1}^{\infty}( (\dfrac{1 - cos(n \omega)}{(n \omega)^2}) cos(nt) + (\dfrac{sen(n \omega)}{(n \omega)^2}  - \dfrac{(-1)^n}{n \omega}) sen(nt))}$\\
+\end{center}
+
+\begin{center}
+Transformada de Fourier\\
+$\displaystyle{F(j \omega) = \int_{-\infty}^{\infty} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = \int_{-2}^{2} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = 0 + \int_{0}^{1} t e^{-j \omega t} dt + \int_{1}^{2} e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) =(-\dfrac{ t e^{-j \omega t}}{j \omega} - \dfrac{e^{-j \omega t}}{(j \omega)^2}) \mid_{0}^ {1} - \dfrac{ e^{-j \omega t}}{j \omega} \mid_{1}^{2}}$\\
+$\displaystyle{F(j \omega) =(-\dfrac{e^{-j \omega }-0}{j \omega} - \dfrac{e^{-j \omega} - 1}{(j \omega)^2}) - \dfrac{ e^{-2j \omega }- e^{-j \omega }}{j \omega} }$\\
+$\displaystyle{F(j \omega) =  \dfrac{1-e^{-j \omega}}{(j \omega)^2}  - \dfrac{ e^{-2j \omega }}{j \omega}}$\\
+Espectro de Frecuencias
+
+\end{center}
+\textbf{4) Defina y explique que es una Serie de Bessel}
+Es un caso particular de la series Generalizadas de Fourier\\
+\\${x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + (x^2 - \alpha^2)y = 0}$
+\end{document}
