@@ -24,6 +24,242 @@
 IV MECATRÓNICA "A"\\[1cm]
 Latacunga-Ecuador - \today
 \end{center}
+
+\section{Métodos de una resolución de EDO}
+\subsection*{Integrales y Derivadas}
+Para resolver una ecuacion diferencial ordinaria EDO, podemos utilizar los conceptos que ya conocemos en Matlab. Como demostracion, examinaremos la siguiente ecuacion diferencial:
+
+ \begin{center}
+ $\frac{d^2y}{{dx}^2}=7x^3-\frac{1}{x^4}$
+ \end{center}
+Integrando en ambos extremos con respecto a la variable independiente
+
+\begin{center}
+$\int \frac{d^2y}{{dx}^2}dx=\int (7x^3-\frac{1}{x^4})dx$
+\end{center}
+
+Obtenemos 
+\begin{center}
+ $\frac{dy}{dx}=\frac{7x^4}{4}-\frac{1}{x^3}+C_1$
+\end{center}
+
+Integramos nuevamente
+\begin{center}
+$\int \frac{dy}{dx}dx=\int (\frac{7x^4}{4}-\frac{1}{x^3}+C_1)dx$
+\end{center}
+
+Obtenemos la ecuacion General:
+$y=\frac{7}{20}x^6-\frac{1}{x^2}+C_1x+C_2$
+\\
+Realizando lo mismo en Matlab, podemos ingresar los siguientes comandos:
+
+
+
+
+
+
+Como se observa, hemos llegado a la misma respuesta. Ahora bien, dado que Matlab no agrega las constantes de integracion, nosotros mismos debemos agregarlas, simplemente creandolas como variables aleatorias con {\bf syms}, y sumandolas en la operacion de integracion
+\\
+Para el ejemplo anterior, dado que debiamos integrar dos veces, habia que sumar la primera costante de integracion en la primera operacion, y la segunda constante de integracion en la segunda operacion
+
+\subsection*{Metodos de separacio de variables}
+Sea la siquiente ecuacion diferencial:
+
+\begin{center}
+$\frac{dy}{dx}=\frac{xy+3x-y-3}{xy-2x+4y-8}$
+\end{center}
+
+Resolverla utilizando integracion: En Matlab, utilizaremos los comandos {\bf simple}, para simplificar (o factorizar) la expresion:
+
+Ahora en nuestra cabeza (o en nuestro cuaderno) reescribir la ecuacion para que nos quede en la forma deseada:
+
+\begin{center}
+$\frac{y-2}{y+3}dy=\frac{x-1}{x+4}dx$
+\end{center}
+
+Para resolverla por este metodo, y obtener el valor de la constante de integracion, debemos de igualar a cero:
+
+\begin{center}
+$\frac{y-2}{y+3}dy-\frac{x-1}{x+4}dx=0$
+\end{center}
+
+Escribiendo en Matlab, tenemos:
+
+
+
+
+Por lo que nuestra solucion general es:
+
+\begin{center}
+$C=y-5 \ln(y+3)-x+5 \ln(x+4)$
+\end{center}
+
+Ahora, necesitamos una solucion particular para $y_{(0)}=1$; por lo que se entiende que $x=0$ y $y=1$; entonces, simplemente le damos valores fijos a las variables aleatorias {\bf x} e {\bf y}, y utilizamos {\bf eval} para calcular nuevamente C:
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Comando dsolve}
+Este comando ayuda a facilitar la resolucion de EDO's, pero hay que definir la ecuacion como una cadena de texto
+\\
+Ahora resolvamos nuevamente el primer ejercicio (Ingresando la ecuacion diferencial en su forma diferencial):
+
+
+Como puede apreciarse, escribimos la expresion en terminos de t, no de x. Esto se debe a que en el area de investigacion, la mayoria de ecuaciones diferenciales, son en razon del tiempo, por lo que Matlab maneja que toda esta en funcion de t.
+\\
+Entonces, simplemente, sustituimos x por t en la expresion, y a la respuesta, la sustituimos en viceversa. Note tambien que es importante la notacion de la derivada de y. Por lo cual se puede guiar en la siguiente tabla:
+
+\begin{center}
+\begin{tabular}{|c|c| } \hline
+ $Escritura$ & $Equivalencia$ \\ \hline
+Dy & $\frac{dy}{dt}$ \\ \hline
+
+D2y & $\frac{d^2y}{{dt}^2}$  \\ \hline
+
+D3y & $\frac{d^32y}{{dt}^3}$  \\ \hline
+
+Dny & $\frac{d^ny}{{dt}^n}$\\ \hline
+
+\end{tabular}
+\end{center}
+
+Ahora resolveremos un ejercicio ya hecho en el metodod de separacion de variables
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lamentablemente, dado que Matlab busca siempre la respuesta mas exacta, e sposible que algun resultado nos sea expresado en una funcion llamada Lambert $W^1$, la cual, sale por completo de nuestro conocimiento matematico (e innecesario), por fortuna, dicha funcion es una sencilla igualdad:
+
+\begin{center}
+$f(z)=W.f(z).e^{W.f(z)}$
+\end{center}
+
+Es decir, cuando el elemento multiplicador de la funcion es igual al exponente de $e$ entonces, equivale a unicamente la expresion $f(z)$. Al obtener esta respuesta, hay que realizar un simple truco, repitiendo el proceso, ponga mucha atencion (vamos a escribir en una forma derivativa):
+
+
+
+
+
+
+
+
+
+
+Con el comando {\bf solve}($funcion,'variable'$) hemos despejado la respuesta de la ecuacion diferencial en relacion a $C_1$. Con ello obtenemos una respuesta compacta. Simplemente hacemos caso omiso a todas las (t) en la expresion.
+\\
+De esto:
+\begin{center}
+$C_1=-y(t)-5*\ln (\frac{x(t)+4}{y(t)+3})+x(t)$
+\end{center}
+
+Llegamos a esto:
+\begin{center}
+$C_1=-y-5*\ln (\frac{x+4}{y+3})+x$
+\end{center}
+
+Ahora expandimos el logaritmo:
+\begin{center}
+$C_1=-y-5(\ln(x+4)-\ln(y+3))+x$
+\end{center}
+
+Realizamos la multiplicacion:
+\begin{center}
+$C_1=-y-5\ln(x+4)+5\ln(y+3)+x$
+\end{center}
+  
+Ordenamos y finalmente:
+\begin{center}
+$C_1=-y-5\ln(x+4)+x+5\ln(y+3)$
+\end{center}
+ 
+Observe que es la misma respuesta obtenida por integrales, exceptuando que toda la expresion esta multiplicada por un factor de $(1)$. Esto se debe a que dependiendo de la naturaleza de la funcion, posee suspropias restricciones en rango y dominio, por lo que por simetria, la curva $C_1$ es simetrica equivalente a $-C_1$; es decir es la misma traza, con signo diferente
+\\
+Por elli, el software no puede sustituir las buenas practicas de ejercicios manuales, aunque nos aporta gran ayuda
+\\
+{\bf No se preocupe, si su respuesta hecha a mano, es de signo contrario a la aportadad por Matlab. !Su respuesta es correcta!, solo que Matlab encontro la respuesta de la traza reflejada}
+
+\section*{Soluciones Particulares con el comando dsolve}
+
+Al comando {\bf dsolve} tambien se le puede agregar condiciones iniciales:
+
+\begin{center}
+$dsolve('ecuacion diferencial','condicion inicial')$
+\end{center}
+
+Como ejemplo resolvamos la ecuacion diferencial con  condiciones iniciales:
+
+\begin{center}
+$(y^3-x^3)dx-(xy^2)dy=0$
+\\
+con $y(1)=2$
+\end{center}
+
+Para que sea facil su ingreso en la linea de comandos, hacemos un cambio de variable x por t:
+
+\begin{center}
+$$(y^3-t^3)dt-(ty^2)dy=0$$
+\end{center}
+
+Ahora llevamos a la forma diferencial:
+
+\begin{center}
+$\frac{dy}{dt}=\frac{y^3-t^3}{ty^2}$
+\end{center}
+
+Luego ingresamos en Matlab
+
+
+
+
+
+
+
+
+
+El sistema nos devuelve una respuesta en terminos de las variables dependientes, es decir {\bf y}, lo que se interpreta como:
+
+\begin{center}
+$y=t{(-3\ln(t)+8)}^{\frac{1}{3}}$
+\end{center}
+
+Realizamos el cambio de variable:
+
+\begin{center}
+$y=x{(-3\ln(x)+8)}^{\frac{1}{3}}$
+\end{center}
+
+Y asi tenemos la solucion particular de la ecuacion. Pero si nos conviene la respuesta expresada en C (es decir el valor unemrico constante en la expresion) debemos trabajar la respuesta a mano:
+
+\begin{center}
+$\frac{y}{x}={(-3\ln(x)+8)}^{\frac{1}{3}}$
+\\
+$\frac{y^3}{x^3}=-3\ln(x)+8$
+\end{center}
+
+Llegamos a la respuesta clasica:
+
+\begin{center}
+$\frac{y^3}{x^3}+3\ln(x)=8$
+\end{center}
 \begin{center}
 \section{Resolución de Ecuaciones Diferenciales Parciales con Matlab}
 \end{center}
