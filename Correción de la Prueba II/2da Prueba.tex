@@ -6,7 +6,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \author{Guido Torres}
-\title{Correccion de la segunda prueba}
+\title{Correccion de la Segunda Prueba}
 \begin{document}
 
 \begin{center}
@@ -148,6 +148,54 @@ $X_{(x)}=C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x}$ & $Y_{(y)}=C_3
 $u=X_{(x)} Y_{(y)}=(C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x})(C_3e^{\alpha x}+C_4e^{-\alpha x})$
 
 \end{enumerate}
+Determinar :
+\[
+f(x)= \left\{ \begin{array}{lcl}
+-1 & \mbox{ si } & -2 < t < 0 \\
+& & \\
+1 & \mbox{ si } & 0 < t < 2\\
+
+\end{array}
+\right.
+\]
+
+\begin{center}
+Resolución\\
+Serie de Fourier\\
+Término $a_0$\\
+$p=2$
+\end{center}
+
+\begin{center}
+$\displaystyle{a_0 = \dfrac{1}{p} \int_{-p}^{p} f(t) dt = \dfrac{1}{2} \int_{-2}^{2} f(t) dt = \dfrac{1}{2} (\int_{-2}^{0} -1 dt + \int_{0}^{2} 1 dt)}$\\
+$\displaystyle{a_0 = \dfrac{1}{2} (-t \mid^0_{-2}  +t \mid^2_0 ) = \dfrac{1}{2} (2+2)  = \dfrac{4}{2}}=2$\\
+Término $a_n$\\
+$\displaystyle{a_n = \dfrac{1}{p} \int_{-p}^{p} f(t) cos (\dfrac{n\pi t}{p})dt = \dfrac{1}{2} \int_{-2}^{2} f(t) cos (\dfrac{n\pi t}{2})dt = \dfrac{1}{2} (\int_{-2}^{0} -1 cos (\dfrac{n\pi t}{2})dt + \int_{0}^{2} 1 cos (\dfrac{n\pi t}{2})dt)}$\\
 
 
+$\displaystyle {an = 0}$\\
+
+
+
+Término $b_n$\\
+
+$\displaystyle{b_n = \dfrac{1}{p} \int_{-p}^{p} f(t) (\dfrac{n\pi t}{p})dt = \dfrac{1}{2} \int_{-2}^{2} f(t) sen (\dfrac{n\pi t}{2})dt = \dfrac{1}{2} (\int_{-2}^{0} -1 sen (\dfrac{n\pi t}{2})dt + \int_{0}^{2} 1 sen (\dfrac{n\pi t}{2})dt)}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [(\dfrac{2cos(\dfrac{n\pi t}{2}) t}{n \pi}) \mid_{-2}^{0} - (\dfrac{2cos(\dfrac{n\pi t}{2}) t}{n \pi})  \mid_{0}^{2} }$\\
+$\displaystyle{b_n = \dfrac{2}{n \pi} -\dfrac{2}{n \pi} cos(n \pi)}$\\
+
+$\displaystyle{b_n = \dfrac{2}{n \pi}(1-cos(n \pi)}$\\
+Serie de Fourier \\
+$\displaystyle{f(t) = \dfrac{1}{2} a_0 + \sum_{n = 1}^{\infty} (a_n cos (\dfrac{n\pi t}{p})) + b_n sen (\dfrac{n\pi t}{p}))}$\\
+$\displaystyle{f(t) = 1 +  \sum_{n = 1}^{\infty}\dfrac{2}{n \pi}(1-cos(n \pi))sen (\dfrac{n\pi t}{2})}$\\
+\end{center}
+
+\begin{center}
+Transformada de Fourier\\
+$\displaystyle{F(j \omega) = \int_{-\infty}^{\infty} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = \int_{-2}^{2} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = \int_{-2}^{0} -1 e^{-j \omega t} dt + \int_{0}^{2}1 e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) =(-\dfrac{ e^{-j \omega t}}{-j \omega}  \mid_{-2}^ {0} - \dfrac{ e^{-j \omega t}}{j \omega} \mid_{0}^{2}})$\\
+$\displaystyle{F(j \omega) =(\dfrac{1-e^{-j2 \omega }}{j \omega} - \dfrac{e^{-j2 \omega}- 1}{jw})}$\\
+$\displaystyle{F(j \omega) =  \dfrac{2}{j \omega}(1- e^{-j2 \omega })}$\\
+\end{center}
 \end{document}
