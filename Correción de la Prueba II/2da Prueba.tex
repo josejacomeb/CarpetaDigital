@@ -1,0 +1,201 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Guido Torres}
+\title{Correccion de la Segunda Prueba}
+\begin{document}
+
+\begin{center}
+
+\textbf{Corrección de la Segunda Prueba}
+
+\end{center}
+\begin{enumerate}
+
+\item Resolver las siguientes EDP(Ecuaciones Diferenciales Parciales)
+
+\begin{enumerate}
+\item $u_x=u_y+u$
+\item $a^2 \frac{d^2u}{{dx}^2}=\frac{d^2u}{{dt}^2}$ 
+\end{enumerate}
+
+Desarrollo
+\begin{enumerate}
+\item $u_x=u_y+u$
+\end{enumerate}
+\begin{center}
+${ X }^{ ' }Y={ Y }^{ ' }X+XY$
+\\
+$\frac { { X }^{ ' } }{ X } =\frac { { Y }^{ ' }+Y }{ Y } =-\lambda $
+
+\end{center}
+
+\begin{center}
+$\lambda=0$
+\end{center}
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }=0$ & ${ Y }^{ ' }+Y=0$   \\ 
+$D=0$ & $D+1=0$  \\ 
+  & $D=-1$  \\ 
+$X_{(x)}=C_1$ & $Y_{(y)}=C_2 e^{-y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1(C_2 e^{-y})$
+\\
+$u=X_{(x)} Y_{(y)}=C_1C_2 e^{-y}$
+
+
+\begin{center}
+$\lambda=\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }+{ \alpha  }^{ 2 }X=0$ & ${ Y }^{ ' }+Y+{\alpha}^2 Y=0$   \\ 
+                                   & $D+1+{\alpha}^2=0$  \\ 
+$D+{ \alpha  }^{ 2 }=0$ & $D=-1-{\alpha}^2$  \\ 
+$X_{(x)}=C_1 e^{-{\alpha}^2 x}$ & $Y_{(y)}=C_2 e^{-y-{\alpha}^2 y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1 e^{-{\alpha}^2 x} C_2 e^{-y-{\alpha}^2 y}$
+
+
+\begin{center}
+$\lambda=-\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+${ X }^{ ' }-{ \alpha  }^{ 2 }X=0$ & ${ Y }^{ ' }+Y-{\alpha}^2 Y=0$   \\ 
+                                   & $D+1-{\alpha}^2=0$  \\ 
+$D-{ \alpha  }^{ 2 }=0$ & $D=-1+{\alpha}^2$  \\ 
+$X_{(x)}=C_1 e^{{\alpha}^2 x}$ & $Y_{(y)}=C_2 e^{-y+{\alpha}^2 y}$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=C_1 e^{-{\alpha}^2 x} C_2 e^{-y-{\alpha}^2 y}$
+
+\item $a^2 \frac{d^2u}{{dx}^2}=\frac{d^2u}{{dt}^2}$ 
+
+\begin{center}
+${ a }^{ 2 } { X }^{ '' }t=X{ t }^{ '' }$\\$ { a }^{ 2 } \frac { { X }^{ '' } }{ X } = \frac { t^{ '' } }{ t } =- \lambda $
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ ${ a }^{ 2 }{ X }^{ '' }+\lambda X=0$ & $t^{ '' }+ \lambda t=0$   \\ 
+ \end{tabular}
+\end{center}
+
+
+
+
+
+\begin{center}
+$\lambda=0$
+\end{center}
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }=0$ & ${ t }^{ '' }=0$   \\ 
+$a^2D^2=0$ & $D^2=0$  \\ 
+$D=0$  & $D=0$  \\ 
+$X_{(x)}=C_1+C_2x$ & $Y_{(y)}=C_3+C_4y$  \\ 
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1+C_2x)(C_3+C_4y)$
+
+
+\begin{center}
+$\lambda=\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }+{\alpha}^2X=0$ & ${ t }^{ '' }+{\alpha}^2t=0$   \\ 
+$a^2D^2+{\alpha}^2=0$                      & $D^2+{\alpha}^2=0$  \\ 
+$D^2=-\frac{{\alpha}^{ 2 }}{a^2}$ & $D^2=-{\alpha}^2$  \\ 
+$D= \pm \frac{\alpha}{a}j$ & $D=\pm \alpha$  \\ 
+$X_{(x)}=C_1\cos(\frac{\alpha}{a} x)+C_2 \sin(\frac{\alpha}{a} x)$ & $Y_{(y)}=C_3\cos(\alpha y)+C_4\sin(\alpha y)$  \\
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1\cos(\frac{\alpha}{a} x)+C_2 \sin(\frac{\alpha}{a} x))(C_3\cos(\alpha y)+C_4\sin(\alpha y))$
+
+
+\begin{center}
+$\lambda=-\alpha^2$
+\end{center}
+
+\begin{center}
+\begin{tabular}{c c} 
+ 
+$a^2{ X }^{ '' }-{\alpha}^2X=0$ & ${ t }^{ '' }-{\alpha}^2t=0$   \\ 
+$a^2D^2-{\alpha}^2=0$                      & $D^2-{\alpha}^2=0$  \\ 
+$D^2=\frac{{\alpha}^{ 2 }}{a^2}$ & $D^2={\alpha}^2$  \\ 
+$D=\pm \frac{\alpha}{a}j$ & $D=\pm \alpha$  \\ 
+$X_{(x)}=C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x}$ & $Y_{(y)}=C_3e^{\alpha x}+C_4e^{-\alpha x}$  \\
+
+\end{tabular}
+\end{center}
+$u=X_{(x)} Y_{(y)}=(C_1 e^{\frac{\alpha}{a} x} +C_2 e^{-\frac{\alpha}{a} x})(C_3e^{\alpha x}+C_4e^{-\alpha x})$
+
+\end{enumerate}
+Determinar :
+\[
+f(x)= \left\{ \begin{array}{lcl}
+-1 & \mbox{ si } & -2 < t < 0 \\
+& & \\
+1 & \mbox{ si } & 0 < t < 2\\
+
+\end{array}
+\right.
+\]
+
+\begin{center}
+Resolución\\
+Serie de Fourier\\
+Término $a_0$\\
+$p=2$
+\end{center}
+
+\begin{center}
+$\displaystyle{a_0 = \dfrac{1}{p} \int_{-p}^{p} f(t) dt = \dfrac{1}{2} \int_{-2}^{2} f(t) dt = \dfrac{1}{2} (\int_{-2}^{0} -1 dt + \int_{0}^{2} 1 dt)}$\\
+$\displaystyle{a_0 = \dfrac{1}{2} (-t \mid^0_{-2}  +t \mid^2_0 ) = \dfrac{1}{2} (2+2)  = \dfrac{4}{2}}=2$\\
+Término $a_n$\\
+$\displaystyle{a_n = \dfrac{1}{p} \int_{-p}^{p} f(t) cos (\dfrac{n\pi t}{p})dt = \dfrac{1}{2} \int_{-2}^{2} f(t) cos (\dfrac{n\pi t}{2})dt = \dfrac{1}{2} (\int_{-2}^{0} -1 cos (\dfrac{n\pi t}{2})dt + \int_{0}^{2} 1 cos (\dfrac{n\pi t}{2})dt)}$\\
+
+
+$\displaystyle {an = 0}$\\
+
+
+
+Término $b_n$\\
+
+$\displaystyle{b_n = \dfrac{1}{p} \int_{-p}^{p} f(t) (\dfrac{n\pi t}{p})dt = \dfrac{1}{2} \int_{-2}^{2} f(t) sen (\dfrac{n\pi t}{2})dt = \dfrac{1}{2} (\int_{-2}^{0} -1 sen (\dfrac{n\pi t}{2})dt + \int_{0}^{2} 1 sen (\dfrac{n\pi t}{2})dt)}$\\
+$\displaystyle{b_n = \dfrac{1}{2} [(\dfrac{2cos(\dfrac{n\pi t}{2}) t}{n \pi}) \mid_{-2}^{0} - (\dfrac{2cos(\dfrac{n\pi t}{2}) t}{n \pi})  \mid_{0}^{2} }$\\
+$\displaystyle{b_n = \dfrac{2}{n \pi} -\dfrac{2}{n \pi} cos(n \pi)}$\\
+
+$\displaystyle{b_n = \dfrac{2}{n \pi}(1-cos(n \pi)}$\\
+Serie de Fourier \\
+$\displaystyle{f(t) = \dfrac{1}{2} a_0 + \sum_{n = 1}^{\infty} (a_n cos (\dfrac{n\pi t}{p})) + b_n sen (\dfrac{n\pi t}{p}))}$\\
+$\displaystyle{f(t) = 1 +  \sum_{n = 1}^{\infty}\dfrac{2}{n \pi}(1-cos(n \pi))sen (\dfrac{n\pi t}{2})}$\\
+\end{center}
+
+\begin{center}
+Transformada de Fourier\\
+$\displaystyle{F(j \omega) = \int_{-\infty}^{\infty} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = \int_{-2}^{2} f(t) e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) = \int_{-2}^{0} -1 e^{-j \omega t} dt + \int_{0}^{2}1 e^{-j \omega t} dt}$\\
+$\displaystyle{F(j \omega) =(-\dfrac{ e^{-j \omega t}}{-j \omega}  \mid_{-2}^ {0} - \dfrac{ e^{-j \omega t}}{j \omega} \mid_{0}^{2}})$\\
+$\displaystyle{F(j \omega) =(\dfrac{1-e^{-j2 \omega }}{j \omega} - \dfrac{e^{-j2 \omega}- 1}{jw})}$\\
+$\displaystyle{F(j \omega) =  \dfrac{2}{j \omega}(1- e^{-j2 \omega })}$\\
+\end{center}
+\end{document}
