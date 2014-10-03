@@ -1,0 +1,53 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fourier}
+\author{José Jácome}
+\title{Capítulo VII}
+\begin{document}
+%\chapter{Capitulo VII}
+\section{SERIES DE POTENCIAS, DE TAYLOR Y DE LAURENT}
+\subsection{Series de Potencias}
+Una serie de potencias en el plano complejo es de la forma siguiente:
+\begin{equation}
+\sum_{n = 0}^{\infty} c_n (z-z_0)^n = c_0 + c_1(z-z_0) + c_2 (z-z_0)^2 + ... +  c_n (z-z_0)^n + ...
+\end{equation}
+donde $c_n$ son constantes reales y complejos llamados coeficientes "$z_0$" es constante y se llama \textit{centro de la serie},"$z$" es la variable compleja. \\
+Si $z_0 = 0$ , la serie (1) se reduce a la forma $\displaystyle{\sum_{n = 0}^{\infty} c_n z^n = c_0 + c_1 z + c_2 z^2 + ... + }$ , serie de potencias z.\\
+\textbf{OBSERVACIÓN.-}
+\begin{itemize}
+\item Diremos que la serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ es absolutamente convergente, $\forall z \epsilon C$ tal que $ \parallel z - z_0 \parallel  < R$ y es divergente, $\forall \epsilon  C$ , tal que $\parallel z - z_0 \parallel > R$
+\item Si $\exists R > 0$ , tal que $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ converge absolutamente en $\parallel z - z_0 \parallel < R$ y si $0 < \rho < R$ , la serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ converge uniformente en $\parallel z - z_0 \parallel < \rho$
+\item La serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ converge absolutamente  $\forall z \epsilon C$ (en particular en $z = z_0$) tal que $\parallel z - z_0 \parallel < R $ y si $0 < \rho < R$, entonces la serie converge uniformentente, $\forall z \epsilon C$ tal que $0< \parallel z - z_0 \parallel < \rho$
+\item Al número $R > 0$ se llama radio de convergencia de las serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$
+\item Para $z \epsilon C$, se tiene $\parallel z - z_0 \parallel < R$, que se denomina región de convergencia.
+
+\item Para hallar el radio y región de convergencia de una serie de la forma $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, se utiliza el criterio de la razón, que esta caracterizada por el siguiente teorema
+\end{itemize}
+\subsection{TEOREMA (CRITERIO DE LA RAZÓN).-}
+Sea $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia en $C$ y sea $u_n = c_n (z-z_0)^n$, tal que $\displaystyle{\lim_{n \to \infty} \parallel \dfrac{u_{n+1}}{u_n}  \parallel = L }$ , entonces:
+\begin{itemize}
+\item[i)] Si $L<1$, la serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ converge absolutamente.
+\item[ii)] Si $L>1$, la serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ diverge.
+\item[iii)] Si $L=1$, el criterio no decide.
+\end{itemize}
+\textbf{OBSERVACIONES}
+\begin{itemize}
+\item Sea $\displaystyle{\sum_{n=0}^{\infty}}$ una serie de potencia tal que: $\displaystyle{\lim_{n \to \infty} \sqrt[n]{\parallel c_n \parallel} = L}$, entonces:
+\begin{itemize}
+\item[i)] Si $L=0$, entonces ($R= \infty$); la serie es convergente en todo el plano complejo C
+\item[ii)] Si $L>0$, entonces $\displaystyle{R = \dfrac{1}{L}}$
+\item[iii)] Si $L= \infty$, entonces ($R = 0$) converge solamente en el origen.
+\end{itemize}
+\item Sea $\displaystyle{\sum_{n=0}^{\infty} c_n z^n}$ uan serie de potencia tal que: $\displaystyle{\lim_{n \to \infty} \parallel \dfrac{c_{n+1}}{c_n} \parallel = L}$, entonces: 
+\begin{itemize}
+\item[i)] Si $L=0$, entonces ($R= \infty$)
+\item[ii)] Si $L>0$, entonces $\displaystyle{R = \dfrac{1}{L}}$
+\item[iii)] Si $L= \infty$, entonces $R = 0$
+\end{itemize}
+\end{itemize}
+\subsection{FUNCIONES REPRESENTADAS MEDIANTE SERIES DE POTENCIAS.-}
+%PAG 328%
