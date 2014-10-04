@@ -51,3 +51,46 @@ Sea $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia e
 \end{itemize}
 \subsection{FUNCIONES REPRESENTADAS MEDIANTE SERIES DE POTENCIAS.-}
 %PAG 328%
+La serie de potencia  $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, con radio de convergencia $R>0$, define una función de $z$, es decir:  $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, donde $\displaystyle{D_f = {z  \epsilon  C  /  \parallel z - z_0 \parallel < R}}$ es decir que el dominio de $f(z)$ es la región de convergencia de la serie, por ejemplo consideramos la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n = 1 + z + z^2 + ... + z^n+...}$ convergente, $\displaystyle{\forall z \epsilon C}$ tal que $\parallel z \parallel < R$ \\
+Donde $\displaystyle{R = \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = \lim_{n \to \infty} \parallel \dfrac{1}{1} \parallel = 1 }$ es decir la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n}$ es convergente $\forall z \epsilon C$ tal que $\parallel z \parallel < 1$
+%Grafico%
+
+Luego la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n}$ define la función $\displaystyle{\sum_{n = 0}^{\infty} z^n = \dfrac{1}{1-z}}$\\
+\textbf{OBSERVACIÓN.-} Si $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, entonces se dice que $f(z)$ es representada mediante la serie de potencia o se dice que $f(z)$ esta desarrolado mediante una serie de potencia.
+\subsection{DERIVACIÓN E INTEGRACIÓN DE SERIES.-}
+Sea $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia convergente $\forall z \epsilon C$ tal que $\displaystyle{\parallel z - z_0 \parallel < R}$ , $R > 0$ entonces:
+$\displaystyle{f'(z) = \sum_{n = 0}^{\infty} n c_n (z-z_0)^{n-1}}$, convergente $\displaystyle{\forall z \epsilon C}$, tal que $\displaystyle{\parallel z - z_0 \parallel < R'}$ donde $\displaystyle{R = lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel}$, entonces se tiene: \\
+$\displaystyle{R' = \lim_{n \to \infty} \parallel \dfrac{n c_n}{(n+1) c_{n+1}} \parallel =\lim_{n \to \infty}  \dfrac{n}{n+1}  . \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = 1  . \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel  = R}$ \\
+por lo tanto $R = R'$\\
+$\displaystyle{f''(z) = \sum_{n = 0}^{\infty} n (n-1) c_n (z-z_0)^{n-2}}$, converge $\forall z \epsilon C$, tal que $\displaystyle{\parallel z - z_0 \parallel < R''}$, de donde: \\
+$\displaystyle{R'' = \lim_{n \to \infty} \parallel \dfrac{n (n-1) c_n}{n(n+1) c_{n+1}} \parallel =\lim_{n \to \infty}  \dfrac{n(n-1)}{n(n+1)}  . \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = 1  . \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel  = R}$ \\ 
+por lo tanto $R = R''$ \\
+Las series obtenidas, derivando de la serie de potencia original tien el mismo radio de convergencia que la serie original. \\
+Sea $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia convergente $\forall z \epsilon C$ tal que $\parallel z - z_0 \parallel < R$ \\
+$\displaystyle{\int_{z_0}^{z} f(z) dz = \int_{z_0}^{z} \sum_{n = 0}^{\infty} c_n (z-z_0)^n dz = \sum_{n = 0}^{\infty} c_n \int_{z_0}^{z}  (z-z_0)^n dz =  \sum_{n = 0}^{\infty} \dfrac{c_n}{n+1} (z-z_0)^{n+1}}$, es convergente $\forall z \epsilon C$ tal que $\parallel z - z_0 \parallel < R$
+\subsection{SERIE DE TAYLOR Y DE MACLAURIN COMPLEJA.-}
+Sea  $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia convergente $\forall z \epsilon C$ tal que $\parallel z - z_0 \parallel < R$, calculando sus derivadas y evaluando en $z = z_0$ \\
+$\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n} \Rightarrow f(z_0) = c_0$ de donde $c_0 = f(z_0)$ \\
+$\displaystyle{f'(z) = \sum_{n = 1}^{\infty} n c_n (z-z_0)^{n-1}} \Rightarrow f'(z_0) = c_1$ de donde $c_1 = f'(z_0)$ \\ 
+$\displaystyle{f''(z) = \sum_{n = 2}^{\infty} n (n-1) c_n (z-z_0)^{n-2}} \Rightarrow f''(z_0) = 1.2.c_2$ de donde $c_2 = \dfrac{f''(z_0)}{2!}$ \\ 
+$\displaystyle{f'''(z) = \sum_{n = 3}^{\infty} n (n-1)(n-2) c_n (z-z_0)^{n-3}} \Rightarrow f'''(z_0) = 1.2.3.c_3 = 3! c_3$ de donde $c_3 = \dfrac{f'''(z_0)}{3!}$ \\ 
+.\\
+.\\
+.\\
+%Revisar
+$\displaystyle{f^{(m)}(z) = \sum_{n = m}^{\infty} n (n-1)(n-2)...2.1.c_n (z-z_0)^{n-m} = \sum_{n = m}^{\infty} n! c_n (z-z_0)^{n-m}}$ entonces  $f^(n) (z_0) = n! c_n$ de donde $c_n = \dfrac{f^{(n)} (z_0)}{n!}$ \\
+como  $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, desarrollando \\
+$\displaystyle{f(z) = c_0 + c_1 (z-z_0) + c_2 (z-z_0)^2 + ... + c_n(z-z_0)^n+...}$\\
+$\displaystyle{f(z) = f(z_0) +f'(z_0)(z-z_0) + \dfrac{f''(z_0)}{2!}(z-z_0)^2 + ... + \dfrac{f^{(n)}(z_0)}{n!}(z-z_0)^n+ ... }$\\
+
+$\therefore$ \begin{equation}
+f(z) = \sum_{n = 0}^{\infty} \dfrac{f^{(n)} (z_0)(z-z_0)^n}{n!}
+\end{equation}
+es la serie de Taylor alrededor de $z = z_0$\\
+cuando $z_0 = 0$, se tiene la serie \begin{equation}
+f(z) = \sum_{n = 0}^{\infty} \dfrac{f^{(n)}(0) z^n}{n!}
+\end{equation}
+que se denomina serie de MACLAURIN
+\subsection{TEOREMA.-}
+%PAg 331
+\end{document}
