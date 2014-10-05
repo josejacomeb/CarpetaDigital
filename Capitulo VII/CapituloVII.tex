@@ -93,4 +93,24 @@ f(z) = \sum_{n = 0}^{\infty} \dfrac{f^{(n)}(0) z^n}{n!}
 que se denomina serie de MACLAURIN
 \subsection{TEOREMA.-}
 %PAg 331
+Sea $f(z)$ una función analítica en $z_0$, entonces $f(z)$ tiene una representación en serie de Taylor $\displaystyle{f(z) = \sum_{n=0}^{\infty}\dfrac{f^{(n)}(z_0)(z-z_0)^n}{n!}}$, $\displaystyle{\forall z}$ en algún disco de centro en $z_0$\\
+\begin{center}
+ \bf \underline{Demostración}
+ \end{center} 
+ Como $f$ es analítica $\Rightarrow \exists$ un disco $\parallel z- z_0\parallel < r$ en donde $f$ es derivable, sea $\displaystyle{\gamma : \parallel z- z_0\parallel= \dfrac{r}{2}}$, entonces $f$ es derivable en todos los puntos sobre y dentro de $\gamma$.
+ Sea $w \epsilon \gamma$ y $z$ cualquier punto dentro de $\gamma$, entonces escribiremos:\\
+%Grafico pag 332
+$\displaystyle{\dfrac{1}{w-z} = \dfrac{1}{w-z_0}. \dfrac{1}{1-\dfrac{z-z_0}{w-z_0}}}$ \textbf{... (1)}\\
+como $w$ esta más lejos a $z_0$ que lo de z, entonces $\parallel  z - z_0\parallel < \parallel w - z_0 \parallel$ por lo tanto $\parallel \dfrac{z-z_0}{w-z_0} \parallel < 1$, mediante la serie geométrica se tiene:\\
+\begin{center}
+$\displaystyle{\dfrac{1}{1-\dfrac{z-z_0}{w-z_0}}= \sum_{n=0}^{\infty} (\dfrac{z - z_0}{w - z_0})^n}$ \textbf{... (2)}
+\end{center}
+reemplazando (2) en (1) se tiene: $\displaystyle{\dfrac{1}{w-z}= \dfrac{1}{w-z_0}\sum_{n=0}^{\infty} (\dfrac{z - z_0}{w - z_0})^n = \sum_{n=0}^{\infty} \dfrac{(z - z_0)^n}{(w - z_0)^{n+1}}}$ \\ ahora por la fórmula de la integral de Cauchy se tiene: \\
+$\displaystyle{f(z) = \dfrac{1}{2 \pi i} \oint_\gamma \dfrac{f(w)}{w-z} dw = \dfrac{1}{2 \pi i} \oint_\gamma \dfrac{f(w)(z-z_0)^n}{(w-z)^{n+1}} dw }$\\
+$\displaystyle{\sum_{n=0}^{\infty} [ \dfrac{1}{2 \pi i} \oint_\gamma \dfrac{f(w) dw}{(w-z_0)^{n+1}}] (z-z_0)^n}$ \textbf{... (3)}\\
+pero se conoce que: $\displaystyle{\dfrac{1}{2 \pi i} \oint_\gamma \dfrac{f(w) dw}{(w-z_0)^{n+1}} = \dfrac{1}{n!} f^{(n)}(z_0)}$ \textbf{... (4)}\\
+al reemplazar (4) con (3) se obtiene: $\displaystyle{f(z) = \sum_{n = 0}^{\infty} \dfrac{f^{(n)} (z_0)}{n!} (z-z_0)^n}$\\
+que es la representación de la serie de Taylor en un disco abierto de centro $z_0$.
+\subsection{SERIE DE LAURENT.-}
+%pag 334
 \end{document}
