@@ -113,4 +113,21 @@ al reemplazar (4) con (3) se obtiene: $\displaystyle{f(z) = \sum_{n = 0}^{\infty
 que es la representación de la serie de Taylor en un disco abierto de centro $z_0$.
 \subsection{SERIE DE LAURENT.-}
 %pag 334
+Si $f$ es analítica en $z_0$, entonces se puede desarrollar $f$ en una serie de Taylor alrededor de $z_0$ contenido potencia en $\displaystyle{z \rightarrow z_0}$ ahora veremos el caso en que $f$ no sea analítica en $z_0$, si aún podríamos tratar de representar en una serie alrededor de $z_0$. \\
+Si incluimos potencias de $\displaystyle{\dfrac{1}{z-z_0}}$, esta es la idea detrás de la serie de Laurent. \\
+Sea $\displaystyle{\gamma_1 : \parallel z - z_0 \parallel > r}$ , $\displaystyle{\gamma_2 : \parallel z - z_0 \parallel < R}$ , $r < R$\\
+$\displaystyle{D = \lbrace z \epsilon C / r < \parallel    z - z_0 \parallel < R \rbrace}$, la región anular (Disco) acotado por $\gamma_1$ y $\gamma_2$\\
+Sea $\displaystyle{f: D \subset C \longrightarrow C}$ una función analítica dentro y sobre la frontera de $D$, entonces $\forall z \epsilon D$ se tiene : $\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n + \sum_{n = 0}^{\infty} b_n (z-z_0)^n}$\\
+donde $a_n$ y $b_n$ son los coeficientes de la serie de Laurent y $\displaystyle{a_n = \oint_{\gamma_1} \dfrac{f(w) dw}{(w-z_0)^{n+1}}}$ 
+$\displaystyle{b_n = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w) dw}{(w-z_0)^{-n+1}} = \dfrac{1}{2 \pi i} \oint_{\gamma_2} f(w) (w-z_0)^{n-1} dw}$ \\
+En la serie de Laurent \\
+%Grafico 334
+$\displaystyle{\sum_{n = 0}^{\infty} a_n (z-z_0)^n}$ es la parte analítica \\
+$\displaystyle{\sum_{n = 0}^{\infty} b_n (z-z_0)^n}$ es la parte principal \\
+\subsection{TEOREMA.-}
+Sea $f(z)$ una función analítica en el anillo $\displaystyle{\gamma_1 < \parallel z - z_0 \parallel < \gamma_2}$, entonces para $z$ en este anillo $\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n}$ donde $\displaystyle{a_n = \oint_{\gamma_1} \dfrac{f(w) dw}{(w-z_0)^{n+1}}}$ para $\displaystyle{n = 0, +- 1, +-2,...,}$ y $\gamma$ es cualquier circunferencia $\parallel  z - z_0 \parallel = \rho$, con $r_1 < \rho < r_2$\\
+ %grafico 335
+ \begin{center}
+  \textbf{\underline{Demostración}}
+  \end{center} 
 \end{document}
