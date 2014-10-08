@@ -139,6 +139,9 @@ calculando ambas integrales en el sentido contrario al movimiento de las manecil
 Consideremos las integrales de línea por separado para la integral $\displaystyle{\dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w)dw}{w-z}}$ escribiremos $\displaystyle{\dfrac{1}{w-z} = \sum_{n=0}^{\infty} \dfrac{(z-z_0)^n}{(w-z_0)^{n+1}}}$, entonces se tiene\\
 $\displaystyle{\dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w)dw}{w-z} = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \sum_{n=0}^{\infty}  \dfrac{(z-z_0)^n f(w)}{(w-z_0)^{n+1}} dw =  \sum_{n=0}^{\infty} [ \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w) dw}{(w-z_0)^{n+1}}] (z-z_0)^n=\sum_{n = 0}^{\infty} a_n (z-z_0)^n}$ , donde $\displaystyle{a_n = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w) dw}{(w-z_0)^{n+1}}}$; para $\displaystyle{n = 0,+-1,+-2,...}$ \\
 para la integral $\displaystyle{\oint_{\gamma_1} \dfrac{f(w) dw}{w-z}}$, escribiremos en la forma \\
-$\displaystyle{\dfrac{1}{w-z} = \dfrac{1}{(w-z_0)-(z-z_0}}$
+$\displaystyle{\dfrac{1}{w-z} = \dfrac{1}{(w-z_0)-(z-z_0)} = - \dfrac{1}{z-z_0}.\dfrac{1}{1-\dfrac{w-z_0}{z-z_0}}}$, se observa que para $w \epsilon \gamma_1$, se tiene: \\
+$\displaystyle{\parallel \dfrac{w-z_0}{z-z_0} \parallel < 1}$, luego por la serie geométrica se tiene: \\
+$\displaystyle{\dfrac{1}{w-z} = - \dfrac{1}{z-z_0}.\dfrac{1}{1-\dfrac{w-z_0}{z-z_0}} = -\dfrac{1}{z-z_0} \sum_{n = 0}^{\infty} (\dfrac{w-z_0}{z-z_0})^n = - \sum_{n = 0}^{\infty} \dfrac{(w-z_0)^n}{(z-z_0)^{n+1}} = - \sum_{n = 1}^{\infty} \dfrac{(w-z_0)^{n-1}}{(z-z_0)^{n}} }$, por lo tanto se tiene:\\
+$\displaystyle{\dfrac{1}{2 \pi i} \oint_{\gamma_1} \dfrac{f(w)dw}{w-z} = -\sum_{n = 0}^{\infty} [\dfrac{1}{2 \pi i} \oint_{\gamma_1} f(w)(w-z_0)^{n-1}dw] \dfrac{1}{(z-z_0)^n}}$ 
 
 \end{document}
