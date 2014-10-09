@@ -142,6 +142,10 @@ para la integral $\displaystyle{\oint_{\gamma_1} \dfrac{f(w) dw}{w-z}}$, escribi
 $\displaystyle{\dfrac{1}{w-z} = \dfrac{1}{(w-z_0)-(z-z_0)} = - \dfrac{1}{z-z_0}.\dfrac{1}{1-\dfrac{w-z_0}{z-z_0}}}$, se observa que para $w \epsilon \gamma_1$, se tiene: \\
 $\displaystyle{\parallel \dfrac{w-z_0}{z-z_0} \parallel < 1}$, luego por la serie geométrica se tiene: \\
 $\displaystyle{\dfrac{1}{w-z} = - \dfrac{1}{z-z_0}.\dfrac{1}{1-\dfrac{w-z_0}{z-z_0}} = -\dfrac{1}{z-z_0} \sum_{n = 0}^{\infty} (\dfrac{w-z_0}{z-z_0})^n = - \sum_{n = 0}^{\infty} \dfrac{(w-z_0)^n}{(z-z_0)^{n+1}} = - \sum_{n = 1}^{\infty} \dfrac{(w-z_0)^{n-1}}{(z-z_0)^{n}} }$, por lo tanto se tiene:\\
-$\displaystyle{\dfrac{1}{2 \pi i} \oint_{\gamma_1} \dfrac{f(w)dw}{w-z} = -\sum_{n = 0}^{\infty} [\dfrac{1}{2 \pi i} \oint_{\gamma_1} f(w)(w-z_0)^{n-1}dw] \dfrac{1}{(z-z_0)^n}}$ 
-
+$\displaystyle{\dfrac{1}{2 \pi i} \oint_{\gamma_1} \dfrac{f(w)dw}{w-z} = -\sum_{n = 0}^{\infty} [\dfrac{1}{2 \pi i} \oint_{\gamma_1} f(w)(w-z_0)^{n-1}dw] \dfrac{1}{(z-z_0)^n}}$ \\
+donde $\displaystyle{a_n = \dfrac{1}{2 \pi i} \oint_{\gamma_1} f(w) (w-z_0)^{n-1}dw }$, para $n = 1,2,3,...$ ahora utilizamos el teorema de la deformación para reemplazar $\gamma_1$ y $\gamma_2$ con la circunferencia $\gamma_\rho : \parallel z - z_0 \parallel = \rho$, esto nos sirve para expresar una fórmula para $a_0,a_1,a_2,...,a_{-1},a_{-2},...,$ en una sola fórmula\\
+$\displaystyle{a_n = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w)dw}{w-z} - \dfrac{1}{2 \pi i} \oint_{\gamma_1} \dfrac{f(w)dw}{w-z}= \sum_{n=0}^{\infty} a_n (z-z_0)^n + \sum_{n=1}^{\infty} a_{-n} (\dfrac{1}{(z-z_0)^n})}$\\
+$\displaystyle{\sum_{n=0}^{\infty} a_n (z-z_0)^n}$\begin{center}
+ $\displaystyle{\therefore f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n}$
+\end{center}
 \end{document}
