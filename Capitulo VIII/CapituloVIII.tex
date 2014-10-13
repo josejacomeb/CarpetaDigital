@@ -29,6 +29,34 @@ Si $n = 1$, $z_0$ es llamado un cero simple, en tal caso $z_0$ es un polo de ord
 \item $f(z) = ln (z^2 + z -2)$ tiene puntos de ramificación donde $z^2+z-2 = 0$, es decir $z = 1$, $z = -2$. 
 \end{enumerate}
 \item[4º] \textbf{SINGULARIDADES REMOVIBLES.-} El punto singular $z_0$ es llamado una singularidad removible de $F(z)$ si $\lim_{z \to z_0 f(z)}$ existe.\\
-\textbf{Ejemplo.-} El punto singular $z = 0$, es una singularidad removible de $f(z) = \dfrac{sen(z)}{z}$, puesto que $\lim_{z \to z_0} \dfrac{sen (z)}{z} = 1$.
+\textbf{Ejemplo.-} El punto singular $z = 0$, es una singularidad removible de \\ $f(z) =\dfrac{sen(z)}{z}$, puesto que $\displaystyle{\lim_{z \to z_0} \dfrac{sen (z)}{z} = 1}$.
+\item[5º] \textbf{SINGULARIDADES ESENCIALES.-} Una singularidad que no sea polo, ni punto de ramificiación, ni singularidad removible es llamado una singularidad esencial.\\
+\textbf{Ejemplo.-} $f(z) = e^{\dfrac{1}{z-1}}$, tiene una singularidad esencial en $z = 2$ se una función unívoca tiene una singularidad, entonces las singularidades es un polo o una singularidad esencial, por esta razón un polo es llamado algunas veces una singularidad evitable.\\
+Equivalentemente $z = z_0$ es una singularidad esencial si no podemos encontrar algún positivo $n$ tal que: $\displaystyle{\lim_{z \to z_0} (z-z_0)^n f(z) = A \neq 0}$. \\ 
+\item[6º] \textbf{SINGULARIDAD EN EL INFINITO.-} El tipo de singularidad de $f(z)$ en $z = \inf$ (el punto en el infinito) es el mismo como el de $f(\dfrac{1}{w})$ en $w = 0$.\\
+\textbf{Ejemplo.-} La función $f(z) = z^3$ tiene como polo de tercer orden en $z = \inf$, ya que $f(\dfrac{1}{w}) = \dfrac{1}{w^3}$ tiene un polo de tercer orden en $w = 0$.\\
+\textbf{Ejemplo.-} Localizar y clasificar las singularidades\\
+\begin{itemize}
+\item [1)] $f(z) = \dfrac{z}{(z^2 + 4)^2}$ \\
+\begin{center}
+\underline{\textbf{Desarrollo}}
+\end{center}
+$f(z) = \dfrac{z}{(z^2 + 4)^2}$\\
+$\displaystyle{\lim_{z \to 2 i} (z-2 i)^2 f(z) = \lim_{z \to 2 i} \dfrac{z}{(z + 2i)^2} = \dfrac{1}{8i} \neq 0}$, de donde $z = 2 i$ es un polo de segundo orden, simultánmeamente. \\
+$z = -2i$ es un polo de segundo orden.  \\
+Como se pueden encontrar $\delta \; > 0$ tal que ninguna singularidad distinta de $z = 2i$ está dentro del círculo. \\
+$\parallel z - 2i \parallel = \delta$ entonces $z = 2i$ es una singularidad aislada, simultáneamente para $z = -2i$ es una singularidad aislada. 
+\item[2)] $f(z) = \dfrac{ln(z-2)}{(z^2+2z+2)^2}$ \\
+\begin{center}
+\underline{\textbf{Desarrollo}}
+\end{center}
+El punto $z = 2$ es un punto de ramificación y es una singularidad aislada, también $z^2+2z+2 = 0$ de donde se tiene $z = -1 +- 2i$ y se dice que $z = -1 +- 2i$ son polos de cuarto orden de los culaes son singularidades aisladas. 
+\item[3)] $f(z) = \dfrac{sen(\sqrt{z})}{\sqrt{z}}$ 
+\begin{center}
+\underline{\textbf{Desarrollo}}
+\end{center}
+Como $\displaystyle{\lim_{z \to 0} f(z) = \lim_{z \to 0} \dfrac{sen(\sqrt{z})}{\sqrt{z}} = 1 \neq 0}$, entonces $z = 0$ es una singularidad removible.
+
+\end{itemize}
 \end{enumerate}
 \end{document}
