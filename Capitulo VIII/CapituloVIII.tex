@@ -111,5 +111,31 @@ En el caso $m = 1$ y $0! = 1$, por lo tanto si $f$ tiene un polo simple de $z_0$
 \textbf{\underline{Demostración}}
 \end{center}
 Como $z_0$ es un polo de orden $m$ de la función $f(z)$, entonces $f$ tiene un desarrollo en serie de Laurent en el anillo $0 < \parallel z - z_0 \parallel < R $\\
-$\displaystyle{f(z) = \dfrac{a_{-m}}{(z-z_0)^m} + \dfrac{a_{-m+1}}{(z-z_0)^{m-1}} + ... + dfrac{a_{-1}}{z-z_0} + a_0 + a_1(z-z_0) + a_2 (z-z_0)^2 + ...  }$   $... (\alpha)$
+$\displaystyle{f(z) = \dfrac{a_{-m}}{(z-z_0)^m} + \dfrac{a_{-m+1}}{(z-z_0)^{m-1}} + ... + \dfrac{a_{-1}}{z-z_0} + a_0 + a_1(z-z_0) + a_2 (z-z_0)^2 + ...  }$   $... (\alpha)$ \\
+con $a_{-m} \neq 0$, puesto que $f(z)$ tiene un polo de orden $m$ en $z_0$ \\
+ahora lo que quieremos evaluar es $a_{-1}$ que es el residuo de $f$ en $z_0$ es decir: \\
+\begin{center}
+$Re(f,z_0) = a_{-1}$           \hspace{2cm}    $...(1)$
+\end{center}
+a la ecuación ($\alpha$) multiplicamos por $(z-z_0)^m$ \\
+$(z-z_0)^m f(z) = a_{-m} + a_{-m} (z - z_0)^{m-1} + a_0 (z-z_0)^m + ...$\\
+como la serie de la derecha es una serie de Taylor alrededor de $z_0$, entonces $(z-z_0)^m f(z)$ es analítica en $z_0$ ahora derivamos esta ecuación $m-1$ veces es decir: \\
+$\displaystyle{\dfrac{d^{m-1}}{dz^{m-1}} [(z-z_0)^m f(z)] = a_{-1} (m-1)(m-2)...(1) + a_0 m (m-1)(m-2)...(2)(z-z_0) + ...}$\\
+tomando límite cuando $z \to z_0$ se tiene:\\
+$\displaystyle{ \lim_{z \to z_0} \dfrac{d^{m-1}}{dz^{m-1}} [(z-z_0)^m f(z)] =  \lim_{z \to z_0} [a_{-1} (m-1)! + a_0 m!(z-z_0) + ...]}$ 
+$\hspace{3cm} =a_{-1}(m-1)! + 0 +0+...+0$\\
+de donde se obtiene: $\displaystyle{a_{-1} = \dfrac{1}{(m-1)!} \lim_{z \to z_0} \dfrac{d^{m-1}}{dz^{m-1}} [(z-z_0)^m f(z)]}$ \hspace{1.5cm} $...(2)$\\
+al reemplazar $(2)$ en $(1)$ se obtiene: \\
+$\displaystyle{Re(f,z_0) = \dfrac{1}{(m-1)!}  \lim_{z \to z_0} \dfrac{d^{m-1}}{dz^{m-1}} [(z-z_0)^m f(z)]}$
+\subsection{COROLARIO.-} 
+Sea $f(z) = \dfrac{g(z)}{h(z)}$, de donde $g$, $h$ son analíticas en $z_0$, $g(z) \neq 0$ y $h$ tiene un cero simple en $z_0$, entonces $f$ tiene un polo simple de $z_0$ y $Re(f,z_0) = \dfrac{g(z_0)}{h'(z_0)}$
+\begin{center}
+\textbf{\underline{Demostración}}
+\end{center}
+Como $f$ tiene un polo simple de $z_0$ y $h$ tiene un cero simple en $z_0$ , $h(z_0) = 0$ y $h'(z_0) \neq 0$ entonces: \\
+$\displaystyle{Re(f,z_0) = \lim_{z \to z_0} (z-z_0) f(z) = \lim_{z \to z_0} \dfrac{g(z)}{h(z)}}$ \\
+$\displaystyle{\lim_{z \to z_0} g(z) \dfrac{z-z_0}{h(z)} = \lim_{z \to z_0} g(z). \lim_{z \to z_0} \dfrac{1}{\dfrac{h(z) - h(z_0)}{z-z_0}} = g(z_0) . \dfrac{1}{h'(z_0)} = \dfrac{g(z_0)}{h'(z_0)}}$ \\
+$\therefore Re(f,z_0) = \dfrac{g(z_0)}{h'(z_0)}$
+\subsection{EJERCICIOS DESARROLLADOS.-}
+$1) \; $
 \end{document}
