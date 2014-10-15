@@ -142,5 +142,40 @@ $1) \; $ Hallar las singularidades de la función $f(z) = \dfrac{(z+3)^2(z-i) z}
 \textbf{\underline{Demostración}}
 \end{center}
  $f(z) = \dfrac{(z+3)^2(z-i) z}{[z^2 + (3 - i)z - 3i]^2 z^2}$, es analítica excepto en $z = -3$ , $i$ , $0$ puesto que sería $\infty$, por el denominador \\
- $f(z) = \dfrac{(z+3)^2(z-i) z}{(z^2 + (3 - i)z - 3i)^2 z^2} = $ 
+ $f(z) = \dfrac{(z+3)^2(z-i) z}{(z^2 + (3 - i)z - 3i)^2 z^2} =  \dfrac{(z+3)^2(z-i) z}{(z^2 + 3z - iz - 3i)^2 z^2} =  \dfrac{(z+3)^2(z-i) z}{(z-3)^2 (z-i)^2 z^2}$\\
+$\displaystyle{\lim_{z \to -3} f(z) = \lim_{z \to -3} \dfrac{(z+3)^2(z-i) z}{(z-3)^2 (z-i)^2 z^2} = \lim_{z \to -3} \dfrac{1}{(z-i)z} = \dfrac{1}{(-3-i)(-3)}}$\\
+$\; = \dfrac{1}{3(3+i)} = \dfrac{3-i}{3(9+1)} = \dfrac{1}{10} - \dfrac{i}{30}$\\
+exuste por lo tanto $f(z)$ tiene una singularidad en $z = -3$\\
+$\displaystyle{\lim_{z \to i} (z-i) f(z) = \lim_{z \to i} \dfrac{1}{z} = \dfrac{1}{i} = -i}$, es decir que $f(z)$ tiene un polo simple de $z = i$\\
+$\displaystyle{\lim_{z \to 0} z f(z) = \lim_{z \to 0} \dfrac{z(z+3)^2 (z-i)z}{(z+3)^2(z-i)^2z^2} = \lim_{z \to 0} \dfrac{1}{z-i} = i}$\\
+por lo tanto $f(z)$ tiene un polo simple en $z = 0$\\
+$2) \; $ Calcular la integral $\displaystyle{\oint_{\gamma} ctg z dz}$. donde $\gamma : \; \parallel z \parallel = 4 $\\
+\begin{center}
+\textbf{\underline{Desarrollo}}
+\end{center}
+$f(z) = ctgz = \dfrac{cos z}{sen z}$, los polos de $f(z)$ se encuentra en \\
+$sen z = 0 \Rightarrow \: \dfrac{e^{iz}-e^{-iz}}{2i} = 0 \Rightarrow e^{iz} - e^{-iz} = 0 \Rightarrow e^{2iz} = 1$\\
+de donde $z = k \pi$ , $k = 0,+-1,+-2,...$ \\
+Luego $f(z)$ tiene 3 polos simples $0, \pi , -\pi$ que están en el interior de $\gamma$ entonces: \\
+como $f(z) = ctg z = \dfrac{cos z}{sen z} = \dfrac{p(z)}{q(z)}$ donde $q'(z) = cos z$\\
+\begin{center}
+\includegraphics[scale=0.3]{2.png}
+\end{center}
+$Re(f,0) = \dfrac{p(0)}{q'(0)} = \dfrac{cos 0}{cos 0} = 1$ \\
+$Re(f,\pi) = \dfrac{p(\pi)}{q'(\pi)} = \dfrac{cos \pi}{cos \pi} = \dfrac{-1}{-1} = 1$ \\
+$Re(f,-\pi) = \dfrac{p(-\pi)}{q'(-\pi)} = \dfrac{cos (-\pi)}{cos (-\pi)} = \dfrac{-1}{-1} = 1$ \\ 
+$\displaystyle{\oint_{\gamma} ctg zdz = 2 \pi i [1 +1+1]= 6 \pi i}$\\
+$3) \; $ Calcular $\displaystyle{f(z) = \dfrac{e^{4z}}{(z^2+1)(z^2+9)}}$, tiene polos simples de $z = +- i$ ; $z = +- 3i$ de los cuáles solamente $z = +- i$  están en el interior de $\gamma$, entonces: \\
+$\displaystyle{\oint_{\gamma} \dfrac{e^{4z} dz}{(z^2+1)(z^2+9)} = 2 \pi i [Re(f,i) + Re(f,-i)]}$, donde \\
+$\displaystyle{Re(f,i) = \lim_{z \to i} (z-i) \dfrac{e^{4z}}{(z-i)(z+i)(z^2+9)} = \lim_{z \to i} \dfrac{e^{4z}}{(z+i)(z^2+9)} = \dfrac{e^{4i}}{2i(-1+9)} = \dfrac{e^{4i}}{16i}}$\\
+$\displaystyle{Re(f,-i) = \lim_{z \to -i} (z+i) \dfrac{e^{4z}}{(z-i)(z+i)(z^2+9)} = \lim_{z \to -i} \dfrac{e^{4z}}{(z-i)(z^2+9)} = \dfrac{e^{-4i}}{-2i(-1+9)} = -\dfrac{e^{-4i}}{16i}}$\\
+$\displaystyle{\oint_{\gamma} \dfrac{e^{4z} dz}{(z^2+1)(z^2+9)} = 2 \pi i [\dfrac{e^{4i}}{16i} - \dfrac{e^{-4i}}{16i}] = \dfrac{\pi}{8} (e^{4i} - e^{-4i}) = \dfrac{\pi i}{4}(\dfrac{e^{4i} - e^{-4i}}{2i}) = \dfrac{\pi i}{4} sen 4}$\\
+\textbf{$4) \; $ Calcular la integral $\displaystyle{\oint_{\gamma} z^8 e^{\dfrac{1}{z}}dz}$ , de donde $\gamma = \{ z \; \epsilon \; C \; / \parallel z \parallel = \dfrac{1}{2} \} $}\\
+\begin{center}
+\textbf{\underline{Desarrollo}}
+\end{center}
+$\displaystyle{e^{\dfrac{1}{z}} = \sum_{n = 0}^{\infty} \dfrac{1}{n! z^n} = 1 + \dfrac{1}{z} + \dfrac{1}{2!.z^2} + \dfrac{1}{3!.z^3} + ... + \dfrac{1}{n!.z^n} + ... }$\\
+$\displaystyle{z^8 e^{\dfrac{1}{z}} =  z^8 + z^7 + \dfrac{z^6}{2!}+ \dfrac{z^5}{3!} + + \dfrac{z^4}{4!} + \dfrac{z^3}{5!} + \dfrac{z^2}{6!} + \dfrac{z}{7!} + + \dfrac{1}{8!} + \dfrac{1}{9!.z} + ...}$\\
+Luego $Re(f,0)$ = Coeficiente de $\dfrac{1}{r} = \dfrac{1}{9!}$, entonces: \\
+$\displaystyle{\oint_{\gamma} z^8 e^{\dfrac{1}{z}}dz = 2 \pi i Re(f,0) = 2 \pi i (\dfrac{1}{9!}) = \dfrac{\pi i}{177840}}$ 
 \end{document}
