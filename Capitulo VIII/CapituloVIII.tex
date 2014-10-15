@@ -59,4 +59,40 @@ Como $\displaystyle{\lim_{z \to 0} f(z) = \lim_{z \to 0} \dfrac{sen(\sqrt{z})}{\
 
 \end{itemize}
 \end{enumerate}
+\subsection{RESIDUOUS.-} 
+Se conoce por el desarrollo de la serie de Laurent de una función analítica $f(z)$ es una región anular $D = \{ \; z\; \epsilon \; C \; R_1 < \parallel z - z_0 \parallel < R_2 \;\}  $ está dado por: \\
+\begin{center}
+$\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n + \sum_{n = 1}^{\infty} b_n (z-z_0)^{-n}}$                                  ... (*)
+\end{center}
+Si la parte principial consiste de un número finito de términos es decir $b_n = 0$, para $n>m$ y $b_m \neq 0$ entonces la serie (*) toma la forma: \\
+\begin{center}
+$\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n + \dfrac{b1}{z-z_0} + \dfrac{b2}{(z-z_0)^2} + .... + \dfrac{b_m}{(z-z_0)^m}+0+0...}$               
+\end{center}
+en este caso $F(z)$ tiene un polo de orden $m$ en $z=z_0$ y el coeficiente $b_1$ denotado por $a_{-1} = b_1$ recibe el nombre de residuo de $F$ en $z_0$. \\
+Si $F(z)$ tiene un polo simple $z = z_0$, entonces la serie es $\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n + \dfrac{b1}{z-z_0}}$\\
+$\displaystyle{f(z) = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + ... + a_n(z-z_0)^n + ... + \dfrac{b_1}{z - z_0}}$ \\ 
+$\displaystyle{(z-z_0)f(z) = a_0(z-z_0) + a_1(z-z_0)^2 + ...+ a_n(z-z_0)^{n+1} + ... + b_1}$ ahora tomamos el límite cuando $z \to z_0$ \\
+se tiene: $\displaystyle{\lim_{z \to z_0} (z-z_0)f(z) = b_1=Re(f,z_0)}$ , $b_1$ recibe el nombre de $F(z)$ en $z = z_0$. \\                             
+Luego si $F(z)$ tiene un polo en $z = z_0$ y $z_0$ est aen el interior de $\gamma$ entonces $\displaystyle{\oint_{\gamma} F(z)dz \neq 0}$ 
+\begin{center}
+\includegraphics[scale=0.25]{1.png}
+\end{center}
+En este caso $F(z)$ se puede expresar mediante la serie \\
+$\displaystyle{F(z) = \sum_{n = 0}^{\infty} a_n(z-z_0)^n + \sum_{n = 1}^{\infty} b_n(z-z_0)^n}$ , convergente $\forall \; z \; \epsilon \; C$ tal que \\
+$\displaystyle{0 < \parallel z - z_0 \parallel < R}$ y $\displaystyle{a_n = \dfrac{1}{2 \pi i } \oint_{\gamma} \dfrac{F(z)dz}{(z-z_0)^{n+1}}}$ , $\displaystyle {b_n = \dfrac{1}{2 \pi i } \oint_{\gamma} F(z) dz}$ \\
+donde $\gamma$ es una curva cerrada contenida e nel anillo $0 < \parallel z - z_0 \parallel < R$ \\
+Si $n = 1$, $\displaystyle {b_1= \dfrac{1}{2 \pi i} \oint_{\gamma} F(z) dz}$, de donde \\
+$\displaystyle{\oint_{\gamma} F(z)dz = 2 \pi b_1 i}$ donde $b_1$ es el coeficiente de $\dfrac{1}{z-z_0}$ y $b_1$ es el residuo de $F(z)$ que denotaremos por $Re(F,z_0) = b_1$, por lo tanto\\
+\begin{center}
+$\displaystyle{\oint_{\gamma} F(z)dz = 2 \pi i b_1 = 2 \pi i Re(F,z_0)}$\\
+%%Ejemplo 1 y 2
+\end{center}
+\subsection{TEOREMA DEL RESIDUO.-}
+Si $f(z)$ es uan fracción analítica dentror y sobre la curva $\gamma$ excepto en un número finito de puntos singulares $z_1,z_2,z_3,...,z_j,...,z_m$ pertenecientes al interior de $\gamma$, entonces: \\
+\begin{center}
+$\displaystyle{\oint f(z)dz = 2 \pi i \sum_{j = 1}^m Re(f,z_j)}$
+\end{center}
+\begin{center}
+\textbf{\underline{Demostración}}
+\end{center}
 \end{document}
