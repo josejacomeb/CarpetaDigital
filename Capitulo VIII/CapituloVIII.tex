@@ -95,4 +95,21 @@ $\displaystyle{\oint f(z)dz = 2 \pi i \sum_{j = 1}^m Re(f,z_j)}$
 \begin{center}
 \textbf{\underline{Demostración}}
 \end{center}
+Sea $f(z)$ una función analítica dentro y sobre una curva simple y cerrada en $\gamma$, excepto en los puntos $z1,z3,...,z_m$ dentro de $\gamma$ \\
+También sea $Cr_j(z_j)$ la circunferencia de centro $z_j$ y de radio $r_j$ suficientemente pequeño para que $Cr_j (z_j) \subset \gamma$ , $\forall \; j$\\
+$Cr_j (z_j) \cap Cr_k (z_k) = \phi$ , $\forall k \neq j$ entonces \\
+$\displaystyle{\oint_{gamma} f(z)dz = \sum_{j = 1}^{m} \oint Cr_j(z_j) f(z)dz = \sum_{j=1}^{m} 2 \pi i Re(f,z_j) = 2 \pi i \sum_{j = 1}^{m} Re(f,z_j)}$\\
+$\displaystyle{\therefore \oint_{\gamma} f(z)dz = 2 \ pi i \sum_{j = 1}^{m} Re(f, z_j)}$ \\
+\textbf{OBSERVACIÓN.- } Si $z_0$ es un polo de orden $m$, hay una fórmula relativamente simple para calcular $Re(f,z_0)$
+\subsection{TEOREMA.-}
+Si $z_0$ es un polo de orden $m$ de la función $f(z)$ entonces: \\
+\begin{center}
+$\displaystyle{Re(f,z_0) = \dfrac{1}{(m-1)!} \lim_{z \to z_0} \dfrac{d^{m-1}}{dz^{m-1}}[(z-z_0)^m f(z)]}$
+\end{center}
+En el caso $m = 1$ y $0! = 1$, por lo tanto si $f$ tiene un polo simple de $z_0$, entonces se tiene: $\displaystyle{Re(f,z_0) = \lim_{z \to z_0}(z-z_0) f(z)}$
+\begin{center}
+\textbf{\underline{Demostración}}
+\end{center}
+Como $z_0$ es un polo de orden $m$ de la función $f(z)$, entonces $f$ tiene un desarrollo en serie de Laurent en el anillo $0 < \parallel z - z_0 \parallel < R $\\
+$\displaystyle{f(z) = \dfrac{a_{-m}}{(z-z_0)^m} + \dfrac{a_{-m+1}}{(z-z_0)^{m-1}} + ... + dfrac{a_{-1}}{z-z_0} + a_0 + a_1(z-z_0) + a_2 (z-z_0)^2 + ...  }$   $... (\alpha)$
 \end{document}
