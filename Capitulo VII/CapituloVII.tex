@@ -165,5 +165,23 @@ $\displaystyle{\sum_{n=0}^{\infty} a_n (z-z_0)^n}$\begin{center}
  $\displaystyle{\therefore f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n}$
 \end{center}
 \subsection{EJERCICIOS DESARROLLADOS.-}
-
+\textbf{$1) \; $ Si $\displaystyle{\sum_{ n = 1}^{  \infty} w_n}$ es divergente y si $\parallel z_n  \parallel \geq \parallel w_n  \parallel $ para $n = 1,2,3,...$ demuestre que $\displaystyle{\sum_{ n = 1}^{ \infty} \parallel z_n \parallel }$ es divergente}
+\begin{center}
+\textbf{\underline{Desarrollo}}
+\end{center}
+Demostraremos por el absurdo: \\
+Supongamos que $\displaystyle{\sum_{ n = 1}^{ \infty} \parallel z_n \parallel }$ es convergente (pues absolutamente convergente), como $\parallel  z_n\parallel \geq \parallel w_n \parallel$ (por hipótesis) para $n = 1,2,3,...,$ por el "criterio de comparación para convergencia absoluta" la serie infinita $\displaystyle{\sum_{n = 1}^{\infty} w_n}$  es absolutamente convergente, entonces la serie $\displaystyle{\sum_{n = 1}^{\infty} w_n}$ es divergente $\displaystyle{\Rightarrow / \Leftarrow}$. Luego la serie $\displaystyle{\sum_{n = 1}^{\infty} \parallel z_n \parallel}$ es divergente.\\
+\textbf{$2) \; $ Halla reegión de convergencia para la serie de potencia $\displaystyle{\sum_{ n = 0}^{\infty} (z^n + \dfrac{1}{9^n z^n})}$}
+\begin{center}
+\textbf{\underline{Desarrollo}}
+\end{center}
+$\displaystyle{\sum_{ n = 0}^{\infty} (z^n + \dfrac{1}{9^n z^n}) = \sum_{ n = 0}^{\infty}z^n + \sum_{n = 0}^{\infty} \dfrac{1}{9^n z^n}}$\\
+Sea $u_n = z^n \; \Rightarrow \; u_{n+1} = z^{n+1}$, por el criterio de la razón\\
+$\displaystyle{L = \lim_{n \to \infty} \parallel   \dfrac{u_{n+1}}{u_n} \parallel = \lim_{n \to \infty} \parallel   \dfrac{z_{n+1}}{z_n} \parallel = \lim_{n \to \infty} \parallel   z \parallel = \parallel z \parallel < 1} $\\
+Luego la serie $\displaystyle{\sum_{ n = 0}^{\infty} z^n}$ es absolutamente convergente en $\parallel z \parallel < 1$\\
+Sea $u_n = \dfrac{1}{9^n z^n} \; \Rightarrow \; u_{n+1} = \dfrac{1}{9^{n+1} z^{n+1}}$, por el criterio de la razón\\
+$\displaystyle{L = \lim_{n \to \infty} \parallel   \dfrac{u_{n+1}}{u_n} \parallel = \lim_{n \to \infty} \parallel   \dfrac{\dfrac{1}{9^{n+1} z^{n+1}}}{\dfrac{1}{9^n z^n}} \parallel = \lim_{n \to \infty} \parallel   \dfrac{9^n z^n}{9^{n+1} z^{n+1}} \parallel = \lim_{n \to \infty} \dfrac{1}{9} \parallel  \dfrac{1}{z}\parallel = \dfrac{1}{9} \\parallel \dfrac{1}{z} \parallel < 1 \; \Rightarrow \; \parallel z \parallel > \dfrac{1}{9} }$\\
+Luego la serie $\displaystyle{\sum_{n = 0}^{\infty} \dfrac{1}{9^n z^n}}$ es absolutamente convergente en $\parallel z \parallel > \dfrac{1}{9}$ \\
+$\displaystyle{\therefore \; \sum_{n = 0}^{\infty} (z^n + \dfrac{1}{9^n z^n})} $ es convergente en el anillo $\dfrac{1}{9} < \parallel z \parallel < 1$
+ 
 \end{document}
