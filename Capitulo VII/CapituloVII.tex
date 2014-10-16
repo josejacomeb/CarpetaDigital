@@ -24,7 +24,9 @@ Si $z_0 = 0$ , la serie (1) se reduce a la forma $\displaystyle{\sum_{n = 0}^{\i
 \item La serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ converge absolutamente  $\forall z \epsilon C$ (en particular en $z = z_0$) tal que $\parallel z - z_0 \parallel < R $ y si $0 < \rho < R$, entonces la serie converge uniformentente, $\forall z \epsilon C$ tal que $0< \parallel z - z_0 \parallel < \rho$
 \item Al número $R > 0$ se llama radio de convergencia de las serie $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$
 \item Para $z \epsilon C$, se tiene $\parallel z - z_0 \parallel < R$, que se denomina región de convergencia.
-
+\begin{center}
+\includegraphics[scale=0.5]{1.png}
+\end{center}
 \item Para hallar el radio y región de convergencia de una serie de la forma $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, se utiliza el criterio de la razón, que esta caracterizada por el siguiente teorema
 \end{itemize}
 \subsection{TEOREMA (CRITERIO DE LA RAZÓN).-}
@@ -54,7 +56,9 @@ Sea $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$ una serie de potencia e
 La serie de potencia  $\displaystyle{\sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, con radio de convergencia $R>0$, define una función de $z$, es decir:  $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, donde $\displaystyle{D_f = {z  \epsilon  C  /  \parallel z - z_0 \parallel < R}}$ es decir que el dominio de $f(z)$ es la región de convergencia de la serie, por ejemplo consideramos la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n = 1 + z + z^2 + ... + z^n+...}$ convergente, $\displaystyle{\forall z \epsilon C}$ tal que $\parallel z \parallel < R$ \\
 Donde $\displaystyle{R = \lim_{n \to \infty} \parallel \dfrac{c_n}{c_{n+1}} \parallel = \lim_{n \to \infty} \parallel \dfrac{1}{1} \parallel = 1 }$ es decir la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n}$ es convergente $\forall z \epsilon C$ tal que $\parallel z \parallel < 1$
 %Grafico%
-
+\begin{center}
+\includegraphics[scale=0.5]{2.png}
+\end{center}
 Luego la serie $\displaystyle{\sum_{n = 0}^{\infty} z^n}$ define la función $\displaystyle{\sum_{n = 0}^{\infty} z^n = \dfrac{1}{1-z}}$\\
 \textbf{OBSERVACIÓN.-} Si $\displaystyle{f(z) = \sum_{n = 0}^{\infty} c_n (z-z_0)^n}$, entonces se dice que $f(z)$ es representada mediante la serie de potencia o se dice que $f(z)$ esta desarrolado mediante una serie de potencia.
 \subsection{DERIVACIÓN E INTEGRACIÓN DE SERIES.-}
@@ -99,7 +103,10 @@ Sea $f(z)$ una función analítica en $z_0$, entonces $f(z)$ tiene una represent
  \end{center} 
  Como $f$ es analítica $\Rightarrow \exists$ un disco $\parallel z- z_0\parallel < r$ en donde $f$ es derivable, sea $\displaystyle{\gamma : \parallel z- z_0\parallel= \dfrac{r}{2}}$, entonces $f$ es derivable en todos los puntos sobre y dentro de $\gamma$.
  Sea $w \epsilon \gamma$ y $z$ cualquier punto dentro de $\gamma$, entonces escribiremos:\\
-%Grafico pag 332
+%Grafico pag 332 Revisar
+\begin{center}
+\includegraphics[scale=0.5]{3.png}
+\end{center}
 $\displaystyle{\dfrac{1}{w-z} = \dfrac{1}{w-z_0}. \dfrac{1}{1-\dfrac{z-z_0}{w-z_0}}}$ \textbf{... (1)}\\
 como $w$ esta más lejos a $z_0$ que lo de z, entonces $\parallel  z - z_0\parallel < \parallel w - z_0 \parallel$ por lo tanto $\parallel \dfrac{z-z_0}{w-z_0} \parallel < 1$, mediante la serie geométrica se tiene:\\
 \begin{center}
@@ -122,16 +129,25 @@ donde $a_n$ y $b_n$ son los coeficientes de la serie de Laurent y $\displaystyle
 $\displaystyle{b_n = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w) dw}{(w-z_0)^{-n+1}} = \dfrac{1}{2 \pi i} \oint_{\gamma_2} f(w) (w-z_0)^{n-1} dw}$ \\
 En la serie de Laurent \\
 %Grafico 334
+\begin{center}
+\includegraphics[scale=0.5]{4.png}
+\end{center}
 $\displaystyle{\sum_{n = 0}^{\infty} a_n (z-z_0)^n}$ es la parte analítica \\
 $\displaystyle{\sum_{n = 0}^{\infty} b_n (z-z_0)^n}$ es la parte principal \\
 \subsection{TEOREMA.-}
 Sea $f(z)$ una función analítica en el anillo $\displaystyle{\gamma_1 < \parallel z - z_0 \parallel < \gamma_2}$, entonces para $z$ en este anillo $\displaystyle{f(z) = \sum_{n = 0}^{\infty} a_n (z-z_0)^n}$ donde $\displaystyle{a_n = \oint_{\gamma_1} \dfrac{f(w) dw}{(w-z_0)^{n+1}}}$ para $\displaystyle{n = 0, +- 1, +-2,...,}$ y $\gamma$ es cualquier circunferencia $\parallel  z - z_0 \parallel = \rho$, con $r_1 < \rho < r_2$\\
  %grafico 335
+\begin{center}
+\includegraphics[scale=0.25]{5.png}
+\end{center}
  \begin{center}
   \textbf{\underline{Demostración}}
   \end{center} 
 Sea $z$ en el anillo, elegimos los números $R_1$ y $R_2$, tal que $\displaystyle{r_1 < R_1 <  \parallel z -z_0  \parallel < R_2 < r_2}$, tal como en la figura: \\
 %Grafico 335
+\begin{center}
+\includegraphics[scale=0.25]{6.png}
+\end{center}
 Sea $\gamma_2 : \parallel z - z_0 \parallel = R_2$, la circunferencia de radio $R_2$ y $\gamma_1 : \parallel z -z_0 \parallel = R_1$, la circunferencia de radio $R_1$\\
 Por la fórmula generalizada del teorema de Integral de Cauchy se puede escribir: \\
 $\displaystyle{f(z) = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w)dw}{w-z} - \dfrac{1}{2 \pi i} \oint_{\gamma_1} \dfrac{f(w)}{w-z}dz }$		
@@ -148,4 +164,6 @@ $\displaystyle{a_n = \dfrac{1}{2 \pi i} \oint_{\gamma_2} \dfrac{f(w)dw}{w-z} - \
 $\displaystyle{\sum_{n=0}^{\infty} a_n (z-z_0)^n}$\begin{center}
  $\displaystyle{\therefore f(z) = \sum_{n=0}^{\infty} a_n (z-z_0)^n}$
 \end{center}
+\subsection{EJERCICIOS DESARROLLADOS.-}
+
 \end{document}
